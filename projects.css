@@ -9,7 +9,7 @@
 }
 
 .left-right {
-    width: 80rem;
+    width: fit-content;
     height: auto;
     margin: 1rem;
     padding: 1rem;
@@ -89,15 +89,15 @@
     }
 
     .right video {
-        width: 500px;
+        width: 400px;
     }
     
     .right img {
-        width: 500px;
+        width: 400px;
     }
 }
 
-@media (min-width: 769px) {
+/* @media (min-width: 769px) {
     .left-right {
         width: fit-content;
         padding: 0;
@@ -114,4 +114,4 @@
     .right img {
         width: 550px;
     }
-}
+} */
