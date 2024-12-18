@@ -51,11 +51,11 @@
     }
 
     .right video {
-        width: 345px;
+        width: 330px;
     }
     
     .right img {
-        width: 345px;
+        width: 330px;
     }
 }
 
@@ -78,26 +78,7 @@
     }
 }
 
-@media (max-width: 770px) {
-    .left-right {
-        width: fit-content;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .right video {
-        width: 550px;
-    }
-    
-    .right img {
-        width: 550px;
-    }
-}
-
-@media (max-width: 1030px) {
+@media (min-width: 768px) {
     .left-right {
         width: fit-content;
         padding: 0;

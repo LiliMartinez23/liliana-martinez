@@ -58,7 +58,7 @@ hr {
     }
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 1024px) {
     .experiences {
         display: flex;
         flex-direction: column;
