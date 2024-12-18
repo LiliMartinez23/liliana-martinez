@@ -31,3 +31,42 @@ hr {
     margin: 1rem;
     padding: 1rem;
 }
+
+@media (max-width: 380px) {
+    .experiences {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .exp {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 430px) {
+    .experiences {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .exp {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 1030px) {
+    .experiences {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .exp {
+        width: fit-content;
+    }
+}

@@ -70,4 +70,33 @@ a:hover {
 .title p {
     margin: 0;
 }
-/* INTRODUCTION */
+
+@media (max-width: 380px) {
+    .nav-links {
+        width: fit-content;
+    }
+
+    .nav-link {
+        margin: 0 0.5rem 0 0.5rem;
+    }
+}
+
+@media (max-width: 430px) {
+    .nav-links {
+        width: fit-content;
+    }
+
+    .nav-link {
+        margin: 0 0.5rem 0 0.5rem;
+    }
+}
+
+@media (max-width: 770px) {
+    .nav-links {
+        width: fit-content;
+    }
+
+    .nav-link {
+        margin: 0 0.5rem 0 0.5rem;
+    }
+}
