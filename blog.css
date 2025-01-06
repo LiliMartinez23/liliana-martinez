@@ -1,0 +1,33 @@
+.blog-title-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-title-container hr {
+    width: 75%;
+}
+
+.blog-card-container {
+    display: grid;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.blog-card {
+    width: fit-content;
+    height: auto;
+    padding: 1rem;
+    background-color: #dfdfdf;
+}
+
+.blog-card h2 {
+    margin: 0;
+}
+
+.back-link {
+    margin: 1rem;
+    text-align: center;
+}

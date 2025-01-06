@@ -1,5 +1,6 @@
 @import url('projects.css');
 @import url('experience.css');
+@import url('blog.css');
 
 body {
     background-color: #eaeaea;
@@ -89,6 +90,10 @@ a:hover {
     .nav-link {
         margin: 0 0.5rem 0 0.5rem;
     }
+
+    .blog-card-container {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+    }
 }
 
 @media (max-width: 770px) {
@@ -98,5 +103,15 @@ a:hover {
 
     .nav-link {
         margin: 0 0.5rem 0 0.5rem;
+    }
+
+    .blog-card-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}
+
+@media (min-width: 771px) {
+    .blog-card-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
     }
 }
