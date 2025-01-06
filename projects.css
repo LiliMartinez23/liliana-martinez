@@ -61,7 +61,7 @@
     }
 }
 
-@media (min-width: 2560px) {
+@media (min-width: 1024px) {
     .left {
         width: 50%;
     }
