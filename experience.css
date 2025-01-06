@@ -70,3 +70,16 @@ hr {
         width: fit-content;
     }
 }
+
+@media (min-width: 2560px) {
+    .experiences {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .exp {
+        width: fit-content;
+    }
+}
