@@ -31,3 +31,25 @@
     margin: 1rem;
     text-align: center;
 }
+
+/* @media (max-width: 380px) {
+    .nav-links {
+        width: fit-content;
+    }
+
+    .nav-link {
+        margin: 0 0.5rem 0 0.5rem;
+    }
+} */
+
+@media (max-width: 430px) {
+    .blog-card-container {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+}
+
+@media (min-width: 770px) {
+    .blog-card-container {
+        grid-template-columns: repeat(3, 1fr); /* 2 columns for medium screens */
+    }
+}
