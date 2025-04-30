@@ -1,0 +1,29 @@
+.bio-section {
+    width: 100%;
+    height: auto;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bio-section h2 {
+    color: #00c8ff;
+    font-weight: 400;
+}
+
+.bio-section p {
+    width: 75%;
+    color: #7b7b7b;
+    font-size: 20px;
+}
+
+@media (max-width: 435px) {
+    .bio-section h2 {
+        margin-bottom: 0;
+    }
+    .bio-section p {
+        width: 100%;
+    }
+}

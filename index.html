@@ -7,188 +7,56 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="title" id="home">
+    <!-- -------------------------------------- -->
+    <!--               Navigation               -->
+    <!-- -------------------------------------- -->
+    <div id="nav" class="nav">
         <h1>Liliana Martinez</h1>
-        <div class="nav-links">
-            <a class="nav-link" href="#home">Home</a>
-            <a class="nav-link" href="#projects">Projects</a>
-            <a class="nav-link" href="#experiences">Experience</a>
-            <a class="nav-link" href="blogs/index.html">Blog</a>
+
+        <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,255.99825,255.99825">
+                <g fill="#ffcc00" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M5,8c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175zM5,23c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175zM5,38c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175z"></path></g></g>
+            </svg>
+        </button>
+
+        <div id="nav-links" class="nav-links">
+            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">Projects</a>
         </div>
     </div>
 
-    <div class="projects" id="projects">
-        <div class="left-right">
-            <div class="left">
-                <h2>Eight Letters</h2>
-                <p>
-                    Eight Letters is a digital Valentine's Day card. Each love letter (envelope)
-                    represents a letter in the phrase "I Love You". Since there are eight letters 
-                    in the phrase.
-                </p>
-                <a href="https://lilimartinez23.github.io/eight-letters/">View Live Site<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="#7b00ff"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg></a>
-                <br>
-                <a href="https://github.com/LiliMartinez23/eight-letters">View in GitHub<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="#7b00ff"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg></a>
-            </div>
-            <div class="right">
-                <img src="img/eight-letters.jpg" alt="">
-            </div>
-        </div>
-
-        <div class="left-right">
-            <div class="left">
-                <h2>Gonzalez & Co. Accounting</h2>
-                <p>
-                    Gonzalez & Co. Accounting Firm offers personalized bookkeeping,
-                    tax preparation, and financial advice to help individuals and
-                    businesses stay organized and succeed.
-                </p>
-                <a href="https://www.gonzalezcoaccounting.com/">View Live Site<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="#7b00ff"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg></a>
-            </div>
-            <div class="right">
-                <img src="img/gonzalez-and-co-acct.png" alt="">
-            </div>
-        </div>
-        
-        <div class="left-right">
-            <div class="left">
-                <h2>Electrical Safety Audit</h2>
-                <p>
-                    This streamlined Electrical Safety Audit (ESA) lets employees
-                    record and store compliance, functionality, and safety data for
-                    electrical systems per industry standards.
-                </p>
-                <a href="https://github.com/LiliMartinez23/electrical-safety-audit-report">View in GitHub<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="#7b00ff"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg></a>
-            </div>
-            <div class="right">
-                <video controls src="img/esa-video.mp4"></video>
-            </div>
-        </div>
-
-        <div class="left-right">
-            <div class="left">
-                <h2>ACM Website</h2>
-                <p>
-                    This website showcases the development and growth of the ACM 
-                    student organization at Texas A&M University-San Antonio (TAMUSA).
-                </p>
-                <a href="https://github.com/LiliMartinez23/acm-website">View in GitHub<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="#7b00ff"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg></a>
-            </div>
-            <div class="right">
-                <img src="img/acm-website.png" alt="">
-            </div>
-        </div>
+    <!-- -------------------------------------- -->
+    <!--                  Bio                   -->
+    <!-- -------------------------------------- -->
+    <div class="bio-section">
+        <h2>👋 Hi, I'm <b>Liliana Martinez!</b></h2>
+        <p>A student at Texas A&M University-San Antonio. My <b>web development</b> journey started after I graduated
+            high school and has continued ever since. Throughout college,
+            my interests have expanded to <b>database development</b>,
+            <b>technical writing</b>, and more.
+        </p>
     </div>
 
-    <div class="experiences" id="experiences">
-        <!-- TAMUSA Web Team -->
-        <div class="exp">
-            <h2>TAMUSA's Web Team</h2>
-            <h3>Student Worker II</h3>
-            <hr>
-            <p>
-                During my time as a student on TAMUSAs Web Team, I gained practical experience in 
-                web development, content management systems, and project leadership.
-            </p>
-            <ul>
-                <li><b>Developing the HB2504 Web Application</b>
-                    <br>
-                    Assisted in the development of the HB2504 app using a LAMP stack, allowing faculty 
-                    and staff to efficiently manage syllabi and CV's through a user-friendly 
-                    interface.
-                </li>
-                <li><b>TAMUSA Esports Website Project Lead</b>
-                    <br>
-                    Led the development of TAMUSA's Esports website using HTML, CSS (Bootstrap),
-                    and JavaScript.
-                </li>
-                <li><b>Proficiency in Cascade CMS</b>
-                    <br>
-                    Gained expertise in Cascade CMS to update and manage TAMUSA's websites, ensuring
-                    content accuracy, consistency, and alighment with organizational needs.
-                </li>
-                <li><b>Database Development with MySQL</b>
-                    <br>
-                    Designed and optimized MySQL databases for the HB2504 app, ensuring reliable 
-                    and efficient data storage for academic resources and institutional information.
-                </li>
-            </ul>
-            <hr>
-            <p>December 2022 - Present Date</p>
-        </div>
-        
-        <!-- Self taught -->
-        <div class="exp">
-            <h2>Independent Experience</h2>
-            <h3>At Home</h3>
-            <hr>
-            <p>
-                Before joining the Web Team, I independently studied web development fundamentals, 
-                programming, design principles.
-            </p>
-            <ul>
-                <li><b>Independent Web Development Learning</b>
-                    <br>
-                    Learned web development fundamentals through Udemy courses, building projects to 
-                    apply new skils, and solving coding challenges on LeetCode.
-                </li>
-                <li><b>Database Development with MySQL</b>
-                    <br>
-                    Gained experience in MySQL and its command line by creating a virtual library mangement system 
-                    to log and manage books.
-                </li>
-                <li><b>Python Programming Applications</b>
-                    <br>
-                    Developed a simplifed version of an electrical safety audit to apply Python programming concepts to
-                    real-world scenarios.
-                </li>
-                <li><b>Self-Directed Study</b>
-                    <br>
-                    Read books on web development, programming, and design fundamentals to strengthen tecnical knowledge 
-                    and problem-solving skills.
-                </li>
-            </ul>
-            <hr>
-            <p>2022 - Present Date</p>
-        </div>
+    <!-- -------------------------------------- -->
+    <!--                 Script                 -->
+    <!-- -------------------------------------- -->
+    <script>
+        const nav = document.getElementById('nav');
+        const toggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
 
-        <!-- Hackathons -->
-         <div class="exp">
-            <h2>Hackathon Projects</h2>
-            <h3>Participant</h3>
-            <hr>
-            <p>
-                I actively participated in many hackathons, immersing myself in collaborative environments
-                to enhance my technical skills, creativity, and practical real-world experience.
-            </p>
-            <ul>
-                <li><b>Cloud Secure</b>
-                    <br>
-                    Encrypting classified documents when shared through unsecured platforms like email 
-                    and chat rooms, ensuring data protection.
-                </li>
-                <li><b>Hack to the Future</b>
-                    <br>
-                    A webpage that displays historical events based on user-inputted dates.
-                </li>
-                <li><b>Cheque Mate</b>
-                    <br>
-                    An accessible tool designed to assist elderly individuals manage their finances more easily.
-                </li>
-                <li><b>Finance Tracker</b>
-                    <br>
-                    Focused on monitoring and organizing personal financial data efficiently.
-                </li>
-                <li><b>Rover Tracker</b>
-                    <br>
-                    A system for tracking rover movements and translating captured data into meaningful insights.
-                </li>
-            </ul>
-            <hr>
-            <p>2022 - Present Date</p>
-         </div>
-    </div>
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
 
-    <!-- Blog -->
+        toggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>
