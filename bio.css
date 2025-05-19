@@ -46,8 +46,12 @@
 }
 
 @media (max-width: 435px) {
+    .bio {
+        margin: 1rem;
+    }
+
     .bio h1 {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     .bio-content {
