@@ -54,6 +54,7 @@ h1 {
 }
 
 .btn {
+    font-family: "Source Code Pro", monospace;
     padding: 0 1rem 1rem;
     color: #bebebe;
     border: none;
@@ -69,5 +70,9 @@ h1 {
 @media (max-width: 430px) {
     .cards {
         grid-template-columns: 1fr;
+    }
+
+    .btn {
+        font-size: 15px;
     }
 }
