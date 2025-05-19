@@ -6,9 +6,15 @@
 }
 
 .about-content {
-    margin: 0 1rem;
+    margin: 0 5rem;
 }
 
 .about-content p {
     color: #bebebe;
+}
+
+@media (max-width: 430px) {
+    .about-content {
+        margin: 2rem;
+    }
 }
