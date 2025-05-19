@@ -4,59 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liliana Martinez</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Pixelify+Sans:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <!-- -------------------------------------- -->
-    <!--               Navigation               -->
-    <!-- -------------------------------------- -->
+    <!-- Navigation -->
     <div id="nav" class="nav">
-        <h1>Liliana Martinez</h1>
-
-        <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation">
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,255.99825,255.99825">
-                <g fill="#ffcc00" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M5,8c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175zM5,23c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175zM5,38c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175z"></path></g></g>
-            </svg>
-        </button>
+        <a href="index.html">LM</a>
 
         <div id="nav-links" class="nav-links">
-            <a class="nav-link active" href="#">Home</a>
+            <a id="active" class="nav-link" href="#">Home</a>
             <a class="nav-link" href="#">About</a>
             <a class="nav-link" href="#">Projects</a>
         </div>
     </div>
 
-    <!-- -------------------------------------- -->
-    <!--                  Bio                   -->
-    <!-- -------------------------------------- -->
-    <div class="bio-section">
-        <h2>👋 Hi, I'm <b>Liliana Martinez!</b></h2>
-        <p>A student at Texas A&M University-San Antonio. My <b>web development</b> journey started after I graduated
-            high school and has continued ever since. Throughout college,
-            my interests have expanded to <b>database development</b>,
-            <b>technical writing</b>, and more.
-        </p>
+    <!-- Biography -->
+    <div class="bio">
+        <div class="bio-content">
+            <p>Hello I'm</p>
+            <h1>Liliana Martinez</h1>
+            <p>I like <span class="cycling-word"></span></p>
+        </div>
     </div>
 
-    <!-- -------------------------------------- -->
-    <!--                 Script                 -->
-    <!-- -------------------------------------- -->
+    <!-- Projects -->
+    <div class="projects">
+        <h1>Featured Projects</h1>
+        <div class="cards">
+            <div class="card">
+                <img src="img/gonzalez-and-co-acct.png" alt="">
+                <div class="card-content">
+                    <h2>Gonzalez & Co. Accounting</h2>
+                    <a href="https://www.gonzalezcoaccounting.com/"><button type="btn" class="btn">View Website</button></a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/acm-website.png" alt="">
+                <div class="card-content">
+                    <h2>ACM Website</h2>
+                    <a href="https://lilimartinez23.github.io/acm-website/"><button type="btn" class="btn">View Website</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="experience">
+        <h1>Experiences</h1>
+        <div class="boxes">
+            <div class="box">
+                <h2>TAMUSA Web Team</h2>
+                <div class="img-wrapper">
+                    <img src="img/tamusa.jpg" alt="">
+                    <div class="img-overlay">
+                        <ul>
+                            <li>Student Worker</li>
+                            <li>2022-2027</li><br>
+                            <li>Skills:</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Cascade CMS</li>
+                            <li>Velocity</li>
+                            <li>PHP</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <h2>Hackathons</h2>
+                <div class="img-wrapper">
+                    <img src="img/hackathon.jpg" alt="">
+                    <div class="img-overlay">
+                        <ul>
+                            <li>JagHacks - Winner</li>
+                            <li>Rowdy Hacks</li>
+                            <li>Rowdy Hacks</li>
+                            <li>UTD</li>
+                            <li>Code Red</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <h2>Independent</h2>
+                <div class="img-wrapper">
+                    <img src="img/independent.jpg" alt="">
+                <div class="img-overlay">
+                    <ul>
+                        <li>Contract Web Developer</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
     <script>
-        const nav = document.getElementById('nav');
-        const toggle = document.getElementById('menu-toggle');
-        const navLinks = document.getElementById('nav-links');
+        const words = [
+            "coffee.", 
+            "exercising.", 
+            "traveling.", 
+            "video games.", 
+            "reading books.", 
+            "learning.",
+            "bagels.",
+            "calamari.",
+            "Bob's Burgers."
+        ];
 
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                nav.classList.add('scrolled');
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingSpeed = 100;
+        const erasingSpeed = 50;
+        const delayBetweenWords = 1500;
+
+        const wordSpan = document.querySelector(".cycling-word");
+
+        function typeWord() {
+            const currentWord = words[wordIndex];
+
+            if (!isDeleting) {
+                // Typing forward
+                wordSpan.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+                if (charIndex === currentWord.length) {
+                    // Wait before deleting
+                    isDeleting = true;
+                    setTimeout(typeWord, delayBetweenWords);
+                } else {
+                    setTimeout(typeWord, typingSpeed);
+                }
             } else {
-                nav.classList.remove('scrolled');
+                // Deleting
+                wordSpan.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+                if (charIndex === 0) {
+                    // Move to next word
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length;
+                    setTimeout(typeWord, typingSpeed);
+                } else {
+                    setTimeout(typeWord, erasingSpeed);
+                }
             }
-        });
+        }
 
-        toggle.addEventListener('click', () => {
-            navLinks.classList.toggle('open');
-        });
+        document.addEventListener("DOMContentLoaded", typeWord);
     </script>
 </body>
 </html>

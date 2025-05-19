@@ -1,12 +1,30 @@
-@import url('navbar.css');
+@import url('card.css');
+@import url('experience.css');
 @import url('bio.css');
 
 body {
-    margin: 0 1rem 0 1rem;
+    margin: 0;
+    padding: 0;
     background-color: #232323;
-    font-family: 'Inter', sans-serif;
+    font-family: "Source Code Pro", monospace;
 }
 
 a {
+    color: #bebebe;
     text-decoration: none;
+}
+
+a:hover {
+    color: #ff54fc;
+}
+
+#active {
+    color: #ffd000;
+}
+
+.nav {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
