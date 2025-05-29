@@ -53,15 +53,14 @@
 }
 
 @media (max-width: 435px) {
-    .bio {
-        margin: 1rem;
-    }
-
     .bio h1 {
-        font-size: 25px;
+        font-size: 30px;
     }
 
     .bio-content {
+        width: 300px;
+        height: 300px;
+        padding: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;

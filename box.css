@@ -1,5 +1,4 @@
-.projects {
-    padding: 1rem;
+.project-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
