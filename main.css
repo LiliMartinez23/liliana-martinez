@@ -2,12 +2,20 @@
 @import url('experience.css');
 @import url('bio.css');
 @import url('about.css');
+@import url('box.css');
 
 body {
     margin: 0;
     padding: 0;
-    background-color: #232323;
-    font-family: "Source Code Pro", monospace;
+    background-color: #000000;
+    font-family: "Poppins", sans-serif;
+}
+
+h2 {
+    color: #00aeff;
+    font-weight: 600;
+    font-size: 35px;
+    margin: 0;
 }
 
 a {
@@ -20,7 +28,7 @@ a:hover {
 }
 
 #active {
-    color: #ffd000;
+    color: #00aeff;
 }
 
 .nav {
@@ -28,4 +36,10 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.footer {
+    padding: 0.5rem;
+    background: #bebebe;
+    text-align: center;
 }

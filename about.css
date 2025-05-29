@@ -1,20 +1,28 @@
+.about h2 {
+    color: #00aeff;
+    font-weight: 600;
+}
+
 .about {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
 .about-content {
-    margin: 0 5rem;
+    width: 100%;
+    margin: 1rem;
+    padding: 1rem;
+    border: solid 1px #fff;
+    border-radius: 20px;
+}
+
+.about-content h2 {
+    font-size: 35px;
+    margin: 0;
 }
 
 .about-content p {
     color: #bebebe;
-}
-
-@media (max-width: 430px) {
-    .about-content {
-        margin: 2rem;
-    }
 }

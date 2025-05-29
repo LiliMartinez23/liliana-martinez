@@ -1,5 +1,8 @@
 .bio {
-    margin: 3.5rem;
+    height: 700px;
+    background: url('img/bg.webp') no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,10 +23,14 @@
 }
 
 .bio-content {
+    padding: 3rem 6rem;
+    border: solid 1px #fff;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
+    backdrop-filter: blur(15px);
 }
 
 .cycling-word {

@@ -6,42 +6,42 @@
     align-items: center;
 }
 
-.card {
+.boxes {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
     height: auto;
     margin: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
-.card-content {
-    border: solid 1px #fff;
-    border-radius: 20px;
+.box-content {
     margin: 1rem;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
 }
 
-.card-img-container {
+.box-img-container {
     width: 100%;
 }
 
-.card img {
+.box img {
     width: 100%;
     height: auto;
 }
 
-.card h3 {
+.box h2 {
     color: #bebebe;
-    font-size: 25px;
-    margin: 0;
+    font-size: 14px;
 }
 
-.card p {
+.box p {
     font-size: 18px;
     color: #bebebe;
 }
