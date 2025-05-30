@@ -1,14 +1,20 @@
 .project-box {
+    margin: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.project-box h1 {
+    color: #00aeff;
+}
+
 .boxes {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
     justify-content: center;
     align-items: center;
 }
@@ -61,4 +67,18 @@
     border: solid 1px #fff;
     background: transparent;
     color: #fff;
+}
+
+@media (max-width: 435px) {
+    .boxes {
+        grid-template-columns: 1fr;
+    }
+
+    .box h2 {
+        font-size: 20px;
+    }
+
+    .box-content {
+        text-align: center;
+    }
 }
