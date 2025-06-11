@@ -28,10 +28,10 @@
 }
 
 .socials {
-    background-color: #181818;
+    background-color: #fff;
     border: solid 1px #333;
     border-radius: 5px;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.8rem;
     display: flex;
     flex-direction: row;
     justify-content: center;

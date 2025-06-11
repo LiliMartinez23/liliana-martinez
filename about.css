@@ -1,6 +1,13 @@
 .about h2 {
     color: #00aeff;
     font-weight: 600;
+    font-size: 35px;
+    margin: 0;
+}
+
+.about h3 {
+    color: #bebebe;
+    margin: 0;
 }
 
 .about {
@@ -15,19 +22,17 @@
 .about-content {
     width: 600px;
     margin: 1rem;
-    padding: 1rem;
-    background-color: #181818;
-    border: solid 1px #333;
-    border-radius: 5px;
-}
-
-.about-content h2 {
-    font-size: 35px;
-    margin: 0;
 }
 
 .about-content p {
     color: #bebebe;
+}
+
+.about-subcontent {
+    padding: 1rem;
+    background-color: #181818;
+    border: solid 1px #333;
+    border-radius: 5px;
 }
 
 @media (max-width: 435px) {
@@ -40,6 +45,6 @@
     }
 
     .about-content {
-        width: 365px;
+        width: 390px;
     }
 }
