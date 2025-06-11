@@ -1,8 +1,6 @@
 .bio {
-    height: 700px;
-    background: url('img/bg.webp') no-repeat;
-    background-position: center;
-    background-size: cover;
+    height: auto;
+    margin: 10rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,14 +21,25 @@
 }
 
 .bio-content {
-    padding: 3rem 6rem;
-    border: solid 1px #fff;
-    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
-    backdrop-filter: blur(15px);
+    align-items: center;
+}
+
+.socials {
+    background-color: #181818;
+    border: solid 1px #333;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials a {
+    margin: 0 0.8rem;
 }
 
 .cycling-word {

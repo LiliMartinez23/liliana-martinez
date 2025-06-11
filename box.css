@@ -30,6 +30,7 @@
 
 .box-content {
     margin: 1rem;
+    text-align: center;
 }
 
 .box-img-container {
@@ -58,7 +59,7 @@
     width: 200px;
     height: auto;
     border: solid 1px #fff;
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 10px;
     cursor: pointer;
 }
@@ -76,9 +77,5 @@
 
     .box h2 {
         font-size: 20px;
-    }
-
-    .box-content {
-        text-align: center;
     }
 }
