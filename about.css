@@ -32,10 +32,10 @@
     padding: 1rem;
     background-color: #181818;
     border: solid 1px #333;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
-@media (max-width: 435px) {
+@media (max-width: 545px) {
     .about {
         height: auto;
         display: flex;
@@ -44,7 +44,11 @@
         align-items: center;
     }
 
+    .about h2 {
+        text-align: center;
+    }
+
     .about-content {
-        width: 390px;
+        width: 360px;
     }
 }
