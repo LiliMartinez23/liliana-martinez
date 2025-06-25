@@ -8,6 +8,7 @@
 }
 
 .card {
+    width: 85%;
     height: auto;
     padding: 1rem;
     background-color: #181818;
