@@ -13,7 +13,7 @@ body {
 }
 
 h2 {
-    color: #00aeff;
+    color: #00b9bc;
     font-weight: 600;
     font-size: 35px;
     margin: 0;
@@ -26,12 +26,12 @@ a {
 }
 
 a:hover {
-    color: #ff54fc;
+    color: #00b9bc;
     text-decoration: underline;
 }
 
 #active {
-    color: #00aeff;
+    color: #00b9bc;
 }
 
 .nav {
