@@ -50,21 +50,21 @@
 }
 
 .one {
-    background-image: url('img/vote.jpg');
+    background-image: url('img/vote.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .two {
-    background-image: url('img/IMG_0141.jpeg');
+    background-image: url('img/IMG_0139.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .three {
-    background-image: url('img/plane-trip.jpg');
+    background-image: url('img/plane.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
