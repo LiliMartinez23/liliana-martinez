@@ -1,0 +1,31 @@
+@import url('navbar.css');
+@import url('bio.css');
+@import url('pbio.css');
+@import url('recent.css');
+@import url('selector.css');
+@import url('projects.css');
+
+* {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Footer */
+.footer {
+    padding: 1rem;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
