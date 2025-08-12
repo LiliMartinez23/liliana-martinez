@@ -34,3 +34,14 @@
     width: 100%;
     border-radius: 20px;
 }
+
+/* Mobile */
+@media ( max-width: 535px ) {
+    .personal-bio {
+        padding: 2rem;
+    }
+    .personal-bio-images {
+        display: flex;
+        flex-direction: column;
+    }
+}

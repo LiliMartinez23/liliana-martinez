@@ -29,3 +29,19 @@
 .project-content a:hover {
     text-decoration: underline;
 }
+
+/* Mobile */
+@media ( max-width: 535px ) {
+    .recent-project {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .project-img {
+        width: 300px;
+    }
+    .project-content {
+        width: 75%;
+    }
+}

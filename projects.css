@@ -30,3 +30,10 @@
 .project a:hover {
     text-decoration: underline;
 }
+
+/* Mobile */
+@media ( max-width: 535px ) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}

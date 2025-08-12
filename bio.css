@@ -48,3 +48,11 @@
         border-color: transparent;
     }
 }
+
+/* Mobile */
+@media ( max-width: 535px ) {
+    .bio {
+        display: flex;
+        flex-direction: column;
+    }
+}
