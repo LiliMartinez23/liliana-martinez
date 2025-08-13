@@ -1,7 +1,7 @@
 /* Nav Bar */
 .navbar {
     padding: 1.5rem;
-    background-color: #eaeaea;
+    background-color: #f3f3f3;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -52,5 +52,3 @@
     text-decoration: underline;
     color: #007bff;
 }
-
-/* Mobile Menu */

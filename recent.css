@@ -31,7 +31,7 @@
 }
 
 /* Mobile */
-@media ( max-width: 535px ) {
+@media ( max-width: 545px ) {
     .recent-project {
         display: flex;
         flex-direction: column;
@@ -39,9 +39,15 @@
         align-items: center;
     }
     .project-img {
-        width: 300px;
+        width: 400px;
     }
     .project-content {
         width: 75%;
+    }
+}
+
+@media ( max-width: 435px ) {
+    .project-img {
+        width: 300px;
     }
 }
