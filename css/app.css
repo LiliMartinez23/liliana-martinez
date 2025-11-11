@@ -1,10 +1,10 @@
-@import url('navbar.css');
-@import url('bio.css');
-@import url('pbio.css');
-@import url('recent.css');
-@import url('selector.css');
-@import url('projects.css');
-@import url('mobile-nav.css');
+@import url('/css/navbar.css');
+@import url('/css/bio.css');
+@import url('/css/pbio.css');
+@import url('/css/recent.css');
+@import url('/css/selector.css');
+@import url('/css/projects.css');
+@import url('/css/mobile-nav.css');
 
 * {
     margin: 0;

@@ -95,19 +95,19 @@
     align-items: start;
 }
 #box1 {
-    background-image: url( 'img/tamusa.jpg' );
+    background-image: url( '/img/tamusa.jpg' );
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 #box2 {
-    background-image: url( 'img/independent.jpg' );
+    background-image: url( '/img/independent.jpg' );
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 #box3 {
-    background-image: url( 'img/hackathon.jpg' );
+    background-image: url( '/img/hackathon.jpg' );
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
