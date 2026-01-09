@@ -1,0 +1,49 @@
+.recent-projects-container {
+    margin: 5rem 0;
+}
+.recent-projects-container h2 {
+    margin-left: 2rem;
+}
+
+.recent-projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.recent-project {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.recent-project a {
+    text-decoration: none;
+    color: #000;
+}
+.recent-project a:hover {
+    text-decoration: underline;
+}
+
+.rp-image {
+    width: 50%;
+    height: auto;
+}
+.rp-image img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 510px) {
+    .recent-project {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .rp-image {
+        width: 100%;
+    }
+}
