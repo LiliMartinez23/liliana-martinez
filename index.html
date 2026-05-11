@@ -6,7 +6,50 @@
     <title>Document</title>
     <link rel="stylesheet" href="./src/output.css">
 </head>
-<body>
-    <h1 class="text-3xl font-bold">Hello World!</h1>
+<body class="min-h-screen bg-gray-100">
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <h1 class="text-2xl font-bold text-orange-600">liliana.dev</h1>
+
+            <nav class="hidden md:flex items-center gap-6">
+                <a href="#" class="text-gray-600 hover:text-orange-600 transition cursor-pointer">Home</a>
+                <a href="#" class="text-gray-600 hover:text-orange-600 transition cursor-pointer">About</a>
+                <a href="#" class="text-gray-600 hover:text-orange-600 transition cursor-pointer">Projects</a>
+            </nav>
+
+            <button class="bg-orange-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-orange-700 transition cursor-pointer">Contact</button>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-16 flex items-center">
+        <section class="grid md:grid-cols-2 gap-5 items-center">
+            <!-- Hero Section -->
+            <div>
+                <p class="text-orange-600 font-semibold mb-3">Hi, I'm Liliana</p>
+                <h2 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">Welcome to my website</h2>
+                <p class="text-gray-600 text-lg mb-8">An aspiring purple belt in Brazilian Jiu Jitsu, a food enthusiast, learning Spanish and Chinese, while growing my engagement with my local community.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-orange-700 transition cursor-pointer">Contact</button>
+                    <button class="border border-orange-600 text-orange-600 font-semibold px-6 py-3 rounded-lg hover:bg-orange-50 transition cursor-pointer">View Projects</button>
+                </div>
+            </div>
+
+            <!-- Latest News -->
+            <div class="bg-whtie rounded-2xl shadow-md border border-gray-200 p-8">
+                <div class="bg-orange-100 rounded-xl p-6 mb-4">
+                    <h3 class="text-2xl font-bold text-orange-600 mb-2">Latest News</h3>
+                    <p class="text-gray-600">Happy to share this accomplishment with the best student organization at A&M-SA. <b>#2026JaguarAwards</b></p>
+                </div>
+                <div class="flex items-center justify-center">
+                    <img src="./img/C9E6C0F0-87CE-4FD8-8A5E-1C9303CD1C57.JPG" alt="C9E6C0F0-87CE-4FD8-8A5E-1C9303CD1C57" class="w-full h-auto rounded-lg object-cover">
+                </div>
+            </div>
+
+            <!-- Projects -->
+            <div>
+                
+            </div>
+        </section>
+    </main>
 </body>
 </html>
