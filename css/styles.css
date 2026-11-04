@@ -1,11 +1,18 @@
 h1, h2, h3 {
     font-family: "Noto Serif", serif;
 }
-p, a {
-    color: #797979;
+p, a, li {
+    color: #585858;
 }
-a:hover {
+
+/* nav links */
+.nav-link:hover {
     color: #3b3244;
+    text-decoration: underline;
+}
+.active {
+    color: #3b3244;
+    font-weight: 600;
     text-decoration: underline;
 }
 
@@ -22,5 +29,8 @@ a:hover {
     color: #3b3244;
 }
 .secondary-bg-color {
-    background: #3b324499;
+    background: #3b3244;
+}
+.secondary-bg-color-lo {
+    background: #3b324427;
 }

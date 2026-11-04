@@ -9,115 +9,139 @@
     <link rel="stylesheet" href="./src/output.css">
 </head>
 <body class="primary-bg-color min-h-screen">
+    <!-- header -->
     <header>
         <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
             <h1 class="secondary-color text-2xl font-bold">liliana.dev</h1>
 
             <nav class="hidden md:flex items-center gap-6">
-                <a href="index.html" class="text-color">Home</a>
-                <a href="about.html" class="text-color">About</a>
-                <a href="projects.html" class="text-color">Projects</a>
-                <a href="blogs.html" class="text-color">Blog</a>
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="blogs.html" class="nav-link">Blog</a>
             </nav>
 
-            <a href="mailto:lilianafinona3@gmail.com" class="secondary-color underline font-semibold">Email Me</a>
+            <a href="mailto:lilianafinona3@gmail.com" class="secondary-bg-color primary-color px-5 py-3 rounded-lg font-semibold">Email Me</a>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 py-16 flex flex-col items-center">
-        <section class="mt-10 mb-50 grid md:grid-cols-2 gap-5 items-center">
-            <!-- Hero Section -->
-            <div>
-                <p class="text-color font-semibold mb-3">Hi, I'm Liliana</p>
-                <h2 class="secondary-color text-4xl md:text-6xl font-bold text-gray-500 leading-tight mb-6">Welcome to my website</h2>
-                <p class="text-color text-lg mb-8">
-                    I'm a computer science student with hands-on experience in relational database design, workflow automation, and web development.
-                    I work with PHP, MySQL, HTML, CSS, and Git to build practical applications, manage data, and solve technical problems.
-                    Beyond programming, I'm exploring new interests while making a positive impact through community engagement.
+    <main class="max-w-7xl mx-auto px-6 py-16 flex flex-col items-center">
+        <!-- introduction -->
+        <section class="mt-20 mb-50 flex flex-row items-center gap-4">
+            <!-- hero -->
+            <div class="max-w-3xl">
+                <p class="font-semibold mb-3">COMPUTER SCIENCE • TEXAS A&M UNIVERSITY-SAN ANTONIO</p>
+                <h2 class="secondary-color text-4xl md:text-5xl font-bold leading-tight mb-6">I build practical, database-driven web applications.</h2>
+                <p class="text-lg mb-8">
+                    I develop and troubleshoot web applications, design relational databases, and improve form workflows using
+                    PHP, MySQL, HMTL, CSS, and Git.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="projects.html" class="secondary-color underline font-semibold">View Projects</a>
+                <div class="flex flex-row gap-4">
+                    <a href="projects.html" class="secondary-bg-color primary-color px-5 py-3 rounded-lg font-semibold">Explore My Projects</a>
+                    <a href="Resume-Liliana-Martinez.pdf" class="secondary-color px-2 py-3 underline font-semibold">View Resume</a>
                 </div>
             </div>
 
-            <!-- Latest News -->
-            <div class="secondary-bg-color rounded-2xl p-8">
-                <div class="primary-bg-color rounded-xl p-6 mb-4">
-                    <h3 class="secondary-color text-2xl font-bold mb-2">Latest News</h3>
-                    <p class="text-color">Happy to share this accomplishment with the best student organization at A&M-SA. <b>#2026JaguarAwards</b></p>
-                </div>
-                <div class="flex items-center justify-center">
-                    <img src="./img/jaguar-awards.JPG" alt="C9E6C0F0-87CE-4FD8-8A5E-1C9303CD1C57" class="w-full h-auto rounded-lg object-cover">
-                </div>
+            <!-- experience -->
+            <div class="secondary-bg-color-lo shadow-md rounded-lg p-6 items-center">
+                <p class="font-semibold mb-3">EXPERIENCE AT A GLANCE</p>
+                <h3 class="secondary-color text-2xl font-bold">Web Services</h3>
+                <p class="text-md mb-8">
+                    Student Worker • Texas A&M University-San Antonio
+                </p>
+                <ul>
+                    <li><span><b>&check;</b></span> Database-backed forms</li>
+                    <li><span><b>&check;</b></span> Input validation and workflows</li>
+                    <li><span><b>&check;</b></span> Debugging and application testing</li>
+                </ul>
             </div>
         </section>
 
         <!-- projects -->
         <h2 class="secondary-color text-2xl font-bold mb-5">Featured Projects</h2>
-        <section class="mb-50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- project 1 -->
-            <div class="rounded-xl border border-gray-800 p-6">
-                <div class="secondary-bg-color w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                    <span class="primary-color font-bold text-xl">1</span>
+        <section class="mb-50 grid grid-col-1 gap-5">
+            <!-- audit forms -->
+            <div class="secondary-bg-color-lo rounded-xl p-6 flex flex-row items-center gap-5 grid grid-col-1 md:grid-cols-2">
+                <img src="img/audit-forms.jpg" alt="Audit Forms" class="m-3 w-120 h-auto rounded-lg">
+                <div>
+                    <p class="font-semibold mb-3">FEATURED • WEB TOOL</p>
+                    <h3 class="secondary-color text-2xl font-bold mb-2">Audit Form Generator</h3>
+                    <p class="mb-4">Database-backed audit workflows for collecting, tracking, and reviewing submissions.</p>
+                    <p class="mb-4"><b>My contribution:</b> Relational database work, form validation, and workflow debugging.</p>
+                    <ul class="flex flex-row gap-4">
+                        <li class="primary-bg-color px-5 rounded-xl"><b>PHP</b></li>
+                        <li class="primary-bg-color px-5 rounded-xl"><b>MySQL</b></li>
+                        <li class="primary-bg-color px-5 rounded-xl"><b>JavaScript</b></li>
+                    </ul>
                 </div>
-                <h3 class="secondary-color text-xl font-bold mb-2">ClearPath AI</h3>
-                <p class="text-color mb-4">ClearPath AI is a structured AI summarization system designed to generate cognitively optimized study summaries for learners with ADHD.</p>
-                <a href="https://github.com/GabrielKV4/AI-Academia" class="underline secondary-color font-semibold">View in GitHub</a>
             </div>
-            <!-- project 2 -->
-            <div class="rounded-xl border border-gray-800 p-6">
-                <div class="secondary-bg-color w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                    <span class="primary-color font-bold text-xl">2</span>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- suggestion forms -->
+                <div class="border border-gray-800 rounded-xl p-6 flex flex-row items-center gap-5">
+                    <img src="img/suggestion-forms.png" alt="Audit Forms" class="mr-3 w-40 h-auto rounded-lg">
+                    <div>
+                        <p class="font-semibold mb-3">WEB TOOL</p>
+                        <h3 class="secondary-color text-2xl font-bold mb-2">Suggestion Form Generator</h3>
+                        <p class="mb-4">Database-backed suggestion workflows for collecting, tracking, and reviewing submissions.</p>
+                        <p class="mb-4"><b>My contribution:</b> Relational database work, form validation, and workflow debugging.</p>
+                        <ul class="flex flex-row gap-4">
+                            <li class="primary-color secondary-bg-color px-5 rounded-xl"><b>PHP</b></li>
+                            <li class="primary-color secondary-bg-color px-5 rounded-xl"><b>MySQL</b></li>
+                            <li class="primary-color secondary-bg-color px-5 rounded-xl"><b>JavaScript</b></li>
+                        </ul>
+                    </div>
                 </div>
-                <h3 class="secondary-color text-xl font-bold text-green-600 mb-2">Slingshot Game</h3>
-                <p class="text-color mb-4">Slingshot is a browser-based physics game that uses a slingshot mechanic to launch a ball at stacked targets on different platforms.</p>
-                <a href="https://github.com/LiliMartinez23/slingshot" class="underline secondary-color font-semibold">View in GitHub</a><br>
-                <a href="https://lilimartinez23.github.io/slingshot/" class="underline secondary-color font-semibold">View on Web</a>
-            </div>
-            <!-- project 3 -->
-            <div class="rounded-xl border border-gray-800 p-6">
-                <div class="secondary-bg-color w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                    <span class="primary-color font-bold text-xl">3</span>
+                <!-- image cropping tool -->
+                <div class="border border-gray-800 rounded-xl p-6 flex flex-row items-center gap-5">
+                    <img src="img/crop-tool.png" alt="Audit Forms" class="mr-3 w-40 h-auto rounded-lg">
+                    <div>
+                        <p class="font-semibold mb-3">WEB TOOL</p>
+                        <h3 class="secondary-color text-2xl font-bold mb-2">Image Crop Tool</h3>
+                        <p class="mb-4">Database-backed audit workflows for collecting, tracking, and reviewing submissions.</p>
+                        <p class="mb-4"><b>My contribution:</b> Relational database work, form validation, and workflow debugging.</p>
+                        <ul class="flex flex-row gap-4">
+                            <li class="primary-color secondary-bg-color px-5 rounded-xl"><b>PHP</b></li>
+                            <li class="primary-color secondary-bg-color px-5 rounded-xl"><b>Cropper.js</b></li>
+                            <li class="primary-color secondary-bg-color px-5 rounded-xl"><b>Bootstrap</b></li>
+                        </ul>
+                    </div>
                 </div>
-                <h3 class="secondary-color text-xl font-bold text-green-600 mb-2">Conway's Game of Life</h3>
-                <p class="text-color mb-4">Conway's Game of Life is a mobile Android app that lets users create and simulate patterns using the classic cellular automaton created by John Horton Conway.</p>
-                <a href="https://github.com/LiliMartinez23/and101-groupProject8-GameOfLife" class="underline secondary-color font-semibold">View in GitHub</a>
             </div>
         </section>
-
-        <!-- Footer -->
-        <footer class="border-t border-gray-800 mt-5">
-         <div class="max-w-6xl mx-auto px-6 py-10">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-               <div>
-                  <h2 class="secondary-color text-2xl font-bold mb-3">liliana.dev</h2>
-                  <p class="text-color"><i>"A lecture should inspire and provoke thought."</i> - Richard Dawkins</p>
-                </div>
-
-               <div>
-                  <h3 class="secondary-color text-lg font-semibold mb-3">Quick Links</h3>
-
-                  <ul class="space-y-2">
-                     <li><a href="index.html" class="text-color">Home</a></li>
-                     <li><a href="about.html" class="text-color">About</a></li>
-                     <li><a href="blog.html" class="text-color">Blog</a></li>
-                  </ul>
-               </div>
-
-               <div>
-                  <h3 class="secondary-color text-lg font-semibold mb-3">Connect</h3>
-                  <ul class="space-y-2">
-                     <li><a href="https://github.com/LiliMartinez23" class="text-color">GitHub</a></li>
-                     <li><a href="https://www.linkedin.com/in/liliana-martinez-/" class="text-color">LinkedIn</a></li>
-                     <li><a href="mailto:lilianafinona3@gmail.com" class="text-color">Email</a></li>
-                  </ul>
-               </div>
-            </div>
-            <div class="mt-8 pt-6 text-center">
-               <p class="text-color text-sm">© 2026 Liliana.dev. All rights reserved.</p>
-            </div>
-         </div>
-      </footer>
     </main>
+
+    <!-- footer -->
+    <footer class="border-t border-gray-800 mt-5">
+        <div class="max-w-6xl mx-auto px-6 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h2 class="secondary-color text-2xl font-bold mb-3">liliana.dev</h2>
+                <p><i>"A lecture should inspire and provoke thought."</i> - Richard Dawkins</p>
+            </div>
+
+            <div>
+                <h3 class="secondary-color text-lg font-semibold mb-3">Quick Links</h3>
+
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="secondary-color text-lg font-semibold mb-3">Connect</h3>
+                <ul class="space-y-2">
+                    <li><a href="https://github.com/LiliMartinez23" class="nav-link">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/liliana-martinez-/" class="nav-link">LinkedIn</a></li>
+                    <li><a href="mailto:lilianafinona3@gmail.com" class="nav-link">Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-8 pt-6 text-center">
+            <p class="text-sm">© 2026 Liliana.dev. All rights reserved.</p>
+        </div>
+        </div>
+    </footer>
 </body>
 </html>
