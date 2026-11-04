@@ -4,32 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>liliana.dev</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/output.css">
 </head>
-<body class="min-h-screen bg-gray-900">
-    <header class="bg-gray-900 shadow-sm border-b border-gray-800">
+<body class="primary-bg-color min-h-screen">
+    <header>
         <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <h1 class="text-2xl font-bold text-orange-600">liliana.dev</h1>
+            <h1 class="secondary-color text-2xl font-bold">liliana.dev</h1>
 
             <nav class="hidden md:flex items-center gap-6">
-                <a href="https://lilimartinez23.github.io/liliana-martinez/" class="text-gray-400 hover:text-orange-600 transition cursor-pointer">Home</a>
-                <a href="about.html" class="text-gray-400 hover:text-orange-600 transition cursor-pointer">About</a>
-                <a href="https://github.com/LiliMartinez23" class="text-gray-400 hover:text-orange-600 transition cursor-pointer">Projects</a>
+                <a href="index.html" class="text-color">Home</a>
+                <a href="about.html" class="text-color">About</a>
+                <a href="projects.html" class="text-color">Projects</a>
+                <a href="blogs.html" class="text-color">Blog</a>
             </nav>
 
-            <button class="bg-orange-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-orange-700 transition cursor-pointer"><a href="mailto:lilianafinona3@gmail.com">Contact</a></button>
+            <a href="mailto:lilianafinona3@gmail.com" class="secondary-color underline font-semibold">Email Me</a>
         </div>
     </header>
 
     <!-- Hero -->
     <main class="max-w-6xl mx-auto px-6 py-16 flex flex-col items-center">
-        <section class="mb-10 grid md:grid-cols-2 gap-4 items-center">
-            <!-- Profile Picture -->
-            <img src="./img/liliana-martinez-headshot.jpg" alt="liliana-martinez-headshot" class="w-100 h-auto rounded-lg object-cover">
-
+        <section class="mt-20 mb-30 grid md:grid-cols-2 gap-5 items-center">
             <!-- Hero Section -->
             <div>
-                <p class="text-xl font-bold text-gray-400">Hi, I'm Liliana</p>
+                <h2 class="secondary-color text-xl font-bold">Hi, I'm Liliana</h2>
                 <p class="text-gray-400 text-lg mb-5">
                     A self-employed Web Developer based in San Antonio, Texas looking to
                     expand my skillset and knowledge in Bioinformatics. I'm currently attending
@@ -39,30 +39,16 @@
                     Python as well as learning other web technologies such as Tailwind CSS and React
                     Native.
                 </p>
-                <button class="bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-orange-700 transition cursor-pointer"><a href="Resume-Liliana-Martinez.pdf">My Resume</a></button>
+                <a href="Resume-Liliana-Martinez.pdf" class="secondary-color underline font-semibold">My Resume</a>
             </div>
+
+            <!-- Profile Picture -->
+            <img src="./img/liliana-martinez-headshot.jpg" alt="liliana-martinez-headshot" class="w-fit h-auto rounded-lg object-cover ml-25">
         </section>
+
         <section class="mb-10">
             <div>
-                <h2 class="text-xl font-bold text-gray-400">Learning Self-Defense with Responsibility</h2>
-                <p class="text-gray-400 text-lg mb-5">
-                    Aside from being a college student and student worker, I am also a blue belt in jiu-jitsu.
-                    I have been training for roughly three and a half years, and I love it. At first, I didn't
-                    realize that learning martial arts would change my perspecitve on life, but it did. It taught me
-                    more than discipline; it taught me humility, awareness, and appreciation for the good things
-                    in this world.
-                </p>
-                <p class="text-gray-400 text-lg mb-5">
-                    There is a level of responsibility that comes with learning how to defend yourself. To me,
-                    that responsibility is not about learning how to hurt someone or proving that you can fight.
-                    It is about knowing when to stay calm, when to walk away, and how to protect yourself only when
-                    necessary. I think there is a meaningful difference between learning how to fight and learning
-                    how to defend yourself. One can come from ego, while the other requires maturity, discipline,
-                    and self-control. Jiu-jitsu has taught me that the more capable you become, the more careful
-                    you should be with that ability.
-                </p>
-
-                <h2 class="text-xl font-bold text-gray-400">Fundraising Director - ACM Student Chapter at TAMUSA</h2>
+                <h2 class="secondary-color text-xl font-bold">Fundraising Director - ACM Student Chapter at TAMUSA</h2>
                 <p class="text-gray-400 text-lg mb-5">
                     Serving as the Fundraising Director for the ACM Student Chapter at Texas A&M University-San Antonio
                     has taught me how to engage with both my local community and my college peers. I have helped raise
@@ -73,7 +59,7 @@
                     similar paths.
                 </p>
 
-                <h2 class="text-xl font-bold text-gray-400">My Growth in Coding & Web Development</h2>
+                <h2 class="secondary-color text-xl font-bold">My Growth in Coding & Web Development</h2>
                 <p class="text-gray-400 text-lg mb-5">
                     I started my journey in coding and web development knowing virtually nothing about either field. I began
                     by teaching myself HTML and gradually built my skills through hackathons, course projects, LeetCode
@@ -91,35 +77,35 @@
         </section>
 
         <!-- Footer -->
-        <footer class="bg-gray-900 border-t border-gray-800 mt-5">
+        <footer class="border-t border-gray-800 mt-5">
          <div class="max-w-6xl mx-auto px-6 py-10">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                <div>
-                  <h2 class="text-2xl font-bold text-orange-600 mb-3">liliana.dev</h2>
-                  <p class="text-gray-400"><i>"A lecture should inspire and provoke thought."</i> - Richard Dawkins</p>
+                  <h2 class="secondary-color text-2xl font-bold mb-3">liliana.dev</h2>
+                  <p class="text-color"><i>"A lecture should inspire and provoke thought."</i> - Richard Dawkins</p>
                 </div>
 
                <div>
-                  <h3 class="text-lg font-semibold text-gray-400 mb-3">Quick Links</h3>
+                  <h3 class="secondary-color text-lg font-semibold mb-3">Quick Links</h3>
 
                   <ul class="space-y-2">
-                     <li><a href="index.html" class="text-gray-400 hover:text-orange-600 transition">Home</a></li>
-                     <li><a href="about.html" class="text-gray-400 hover:text-orange-600 transition">About</a></li>
-                     <li><a href="Resume-Liliana-Martinez.pdf" class="text-gray-400 hover:text-orange-600 transition">Resume</a></li>
+                     <li><a href="index.html" class="text-color">Home</a></li>
+                     <li><a href="about.html" class="text-color">About</a></li>
+                     <li><a href="blog.html" class="text-color">Blog</a></li>
                   </ul>
                </div>
 
                <div>
-                  <h3 class="text-lg font-semibold text-gray-400 mb-3">Connect</h3>
+                  <h3 class="secondary-color text-lg font-semibold mb-3">Connect</h3>
                   <ul class="space-y-2">
-                     <li><a href="https://github.com/LiliMartinez23" class="text-gray-400 hover:text-orange-600 transition">GitHub</a></li>
-                     <li><a href="https://www.linkedin.com/in/liliana-martinez-/" class="text-gray-400 hover:text-orange-600 transition">LinkedIn</a></li>
-                     <li><a href="mailto:lilianafinona3@gmail.com" class="text-gray-400 hover:text-orange-600 transition">Email</a></li>
+                     <li><a href="https://github.com/LiliMartinez23" class="text-color">GitHub</a></li>
+                     <li><a href="https://www.linkedin.com/in/liliana-martinez-/" class="text-color">LinkedIn</a></li>
+                     <li><a href="mailto:lilianafinona3@gmail.com" class="text-color">Email</a></li>
                   </ul>
                </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-6 text-center">
-               <p class="text-gray-400 text-sm">© 2026 Liliana.dev. All rights reserved.</p>
+            <div class="mt-8 pt-6 text-center">
+               <p class="text-color text-sm">© 2026 Liliana.dev. All rights reserved.</p>
             </div>
          </div>
       </footer>

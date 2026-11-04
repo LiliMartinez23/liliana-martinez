@@ -1,0 +1,26 @@
+h1, h2, h3 {
+    font-family: "Noto Serif", serif;
+}
+p, a {
+    color: #797979;
+}
+a:hover {
+    color: #3b3244;
+    text-decoration: underline;
+}
+
+/* primary colors */
+.primary-color {
+    color: #fcfafe;
+}
+.primary-bg-color {
+    background: #fcfafe;
+}
+
+/* secondary colors */
+.secondary-color {
+    color: #3b3244;
+}
+.secondary-bg-color {
+    background: #3b324499;
+}
