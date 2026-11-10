@@ -1,175 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-palette="6">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>liliana.dev</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./src/output.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Liliana Martinez, a computer science student in San Antonio building practical web applications and thoughtful database workflows.">
+  <meta name="theme-color" content="#fff9f1">
+  <title>Liliana Martinez — Web Development &amp; Databases</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/site.js" defer></script>
 </head>
-<body class="primary-bg-color min-h-screen">
-    <!-- header -->
-    <header>
-        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <h1 class="secondary-color text-2xl font-bold">liliana.dev</h1>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div id="site-header"></div>
+  <div id="theme-preview"></div>
+  <noscript><nav aria-label="Main navigation"><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="projects.html">Projects</a> · <a href="blogs.html">Blogs</a></nav></noscript>
 
-            <nav class="hidden md:flex items-center gap-6">
-                <a href="index.html" class="active">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="projects.html" class="nav-link">Projects</a>
-                <a href="blogs.html" class="nav-link">Blog</a>
-            </nav>
-
-            <a href="mailto:lilianafinona3@gmail.com" class="secondary-bg-color primary-color px-5 py-3 rounded-lg font-semibold">Email Me</a>
+  <main id="main" tabindex="-1">
+    <section class="section home-hero" aria-labelledby="home-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="accent-dot" aria-hidden="true"></span> Liliana Martinez · Web development &amp; databases</p>
+          <h1 id="home-title">Practical web applications.<br><em>Thoughtful data workflows.</em></h1>
+          <p class="hero-description">I develop university web applications, design relational databases, and turn everyday processes into tools that are easier to use and maintain.</p>
+          <div class="hero-actions"><a class="button" href="projects.html">Explore my work <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="Resume-Liliana-Martinez.pdf">View my resume <span aria-hidden="true">↗</span></a></div>
+          <ul class="hero-skills" aria-label="Core technologies"><li>PHP</li><li>MySQL</li><li>JavaScript</li><li>HTML &amp; CSS</li><li>Git</li></ul>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main class="max-w-7xl mx-auto px-6 py-16 flex flex-col items-center">
-        <!-- introduction -->
-        <section class="mt-20 mb-50 flex flex-row items-center gap-4">
-            <!-- hero -->
-            <div class="max-w-3xl">
-                <p class="font-semibold mb-3">COMPUTER SCIENCE • TEXAS A&M UNIVERSITY-SAN ANTONIO</p>
-                <h2 class="secondary-color text-4xl md:text-5xl font-bold leading-tight mb-6">I build practical, database-driven web applications.</h2>
-                <p class="text-lg mb-8">
-                    I develop and troubleshoot web applications, design relational databases, and improve form workflows using
-                    PHP, MySQL, HMTL, CSS, and Git.
-                </p>
-                <div class="flex flex-row gap-4">
-                    <a href="projects.html" class="secondary-bg-color primary-color px-5 py-3 rounded-lg font-semibold">Explore My Projects</a>
-                    <a href="Resume-Liliana-Martinez.pdf" class="secondary-color px-2 py-3 underline font-semibold">View Resume</a>
-                </div>
-            </div>
-
-            <!-- experience -->
-            <div class="secondary-bg-color-lo shadow-md rounded-lg p-6 items-center">
-                <p class="font-semibold mb-3">EXPERIENCE AT A GLANCE</p>
-                <h3 class="secondary-color text-2xl font-bold">Web Services</h3>
-                <p class="text-md mb-8">
-                    Student Worker • Texas A&M University-San Antonio
-                </p>
-                <ul>
-                    <li><span><b>&check;</b></span> Database-backed forms</li>
-                    <li><span><b>&check;</b></span> Input validation and workflows</li>
-                    <li><span><b>&check;</b></span> Debugging and application testing</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- projects -->
-        <h2 class="secondary-color text-3xl font-bold mb-5">Featured Projects</h2>
-        <section class="mb-50 grid grid-col-1 gap-5">
-            <!-- audit forms -->
-            <div class="secondary-bg-color-lo rounded-xl p-6 flex flex-row items-center gap-5 grid grid-col-1 md:grid-cols-2">
-                <img src="img/audit-forms.jpg" alt="Audit Forms" class="m-3 w-120 h-auto rounded-lg">
-                <div>
-                    <p class="font-semibold mb-3">WEB TOOL</p>
-                    <h3 class="secondary-color text-2xl font-bold mb-2">Audit Form Generator</h3>
-                    <p class="mb-4">Database-backed audit workflows for collecting, tracking, and reviewing submissions.</p>
-                    <p class="mb-4"><b>My contribution:</b> Relational database work, form validation, and workflow debugging.</p>
-                    <ul class="flex flex-row gap-4">
-                        <li class="primary-bg-color px-5 rounded-xl"><b>PHP</b></li>
-                        <li class="primary-bg-color px-5 rounded-xl"><b>MySQL</b></li>
-                        <li class="primary-bg-color px-5 rounded-xl"><b>JavaScript</b></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="grid md:grid-cols-2 gap-6">
-                <!-- suggestion forms -->
-                <div class="border border-gray-800 rounded-xl p-6 flex flex-row items-center gap-5">
-                    <img src="img/suggestion-forms.png" alt="Audit Forms" class="mr-3 w-40 h-auto rounded-lg">
-                    <div>
-                        <p class="font-semibold mb-3">WEB TOOL</p>
-                        <h3 class="secondary-color text-2xl font-bold mb-2">Suggestion Form Generator</h3>
-                        <p class="mb-4">Database-backed suggestion workflows for collecting, tracking, and reviewing submissions.</p>
-                        <p class="mb-4"><b>My contribution:</b> Relational database work, form validation, and workflow debugging.</p>
-                        <ul class="flex flex-row gap-4">
-                            <li class="primary-color secondary-bg-color px-5 rounded-xl"><b>PHP</b></li>
-                            <li class="primary-color secondary-bg-color px-5 rounded-xl"><b>MySQL</b></li>
-                            <li class="primary-color secondary-bg-color px-5 rounded-xl"><b>JavaScript</b></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- image cropping tool -->
-                <div class="border border-gray-800 rounded-xl p-6 flex flex-row items-center gap-5">
-                    <img src="img/crop-tool.png" alt="Audit Forms" class="mr-3 w-40 h-auto rounded-lg">
-                    <div>
-                        <p class="font-semibold mb-3">WEB TOOL</p>
-                        <h3 class="secondary-color text-2xl font-bold mb-2">Image Crop Tool</h3>
-                        <p class="mb-4">Database-backed audit workflows for collecting, tracking, and reviewing submissions.</p>
-                        <p class="mb-4"><b>My contribution:</b> Relational database work, form validation, and workflow debugging.</p>
-                        <ul class="flex flex-row gap-4">
-                            <li class="primary-color secondary-bg-color px-5 rounded-xl"><b>PHP</b></li>
-                            <li class="primary-color secondary-bg-color px-5 rounded-xl"><b>Cropper.js</b></li>
-                            <li class="primary-color secondary-bg-color px-5 rounded-xl"><b>Bootstrap</b></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- professional experience -->
-        <h2 class="secondary-color text-3xl font-bold mb-5">Professional Experience</h2>
-        <section class="border-t border-gray-800 mb-50 grid grid-col-1 gap-5 md:grid-cols-3 items-center">
-            <div class="mt-5">
-                <h3 class="secondary-color text-2xl">Web Services Student Worker</h3>
-                <p>Texas A&M University-San Antonio</p>
-                <p class="mt-5 primary-color secondary-bg-color px-5 rounded-xl w-fit rounded-xl font-semibold">2022-2026</p>
-            </div>
-            <div class="mt-5">
-                <ul>
-                    <li>• Develop and maintain internal web application.</li>
-                    <li>• Build database-backed forms and interfaces.</li>
-                    <li>• Troubleshoot applications and database issues and test fixes.</li>
-                    <li>• Communicate solutions to both technical and non-technical users.</li>
-                </ul>
-            </div>
-            <div class="mt-5">
-                <ul class="grid grid-col-1 md:grid-cols-2 items-center gap-4">
-                    <li class="primary-color secondary-bg-color px-5 rounded-xl w-fit"><b>PHP</b></li>
-                    <li class="primary-color secondary-bg-color px-5 rounded-xl w-fit"><b>MySQL</b></li>
-                    <li class="primary-color secondary-bg-color px-5 rounded-xl w-fit"><b>JavaScript</b></li>
-                    <li class="primary-color secondary-bg-color px-5 rounded-xl w-fit"><b>Cascade CMS</b></li>
-                    <li class="primary-color secondary-bg-color px-5 rounded-xl w-fit"><b>Velocity</b></li>
-                    <li class="primary-color secondary-bg-color px-5 rounded-xl w-fit"><b>Git</b></li>
-                </ul>
-            </div>
-        </section>
-    </main>
-
-    <!-- footer -->
-    <footer class="border-t border-gray-800 mt-5">
-        <div class="max-w-6xl mx-auto px-6 py-10">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-                <h2 class="secondary-color text-2xl font-bold mb-3">liliana.dev</h2>
-                <p><i>"A lecture should inspire and provoke thought."</i> - Richard Dawkins</p>
-            </div>
-
-            <div>
-                <h3 class="secondary-color text-lg font-semibold mb-3">Quick Links</h3>
-
-                <ul class="space-y-2">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="blog.html" class="nav-link">Blog</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h3 class="secondary-color text-lg font-semibold mb-3">Connect</h3>
-                <ul class="space-y-2">
-                    <li><a href="https://github.com/LiliMartinez23" class="nav-link">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/liliana-martinez-/" class="nav-link">LinkedIn</a></li>
-                    <li><a href="mailto:lilianafinona3@gmail.com" class="nav-link">Email</a></li>
-                </ul>
-            </div>
+    <section class="section inverse latest-section" id="latest" aria-labelledby="latest-title">
+      <div class="container section-inner">
+        <div class="section-heading"><div><p class="eyebrow">A closer look at the work</p><h2 id="latest-title">Latest Project<span class="accent-period">.</span></h2></div><a class="text-link" href="projects.html">All projects <span aria-hidden="true">↗</span></a></div>
+        <div class="latest-grid">
+          <figure class="project-figure latest-figure"><a class="project-image-link" href="projects.html#suggestion" aria-label="View Suggestion Form Generator case study"><img class="project-visual" src="img/project-suggestion-visual.svg" alt="Interface illustration of a suggestion form with submission and review statuses" width="1200" height="750" loading="lazy"><span class="image-arrow" aria-hidden="true">↗</span></a><figcaption class="visually-hidden">Interface illustration, not an application screenshot.</figcaption></figure>
+          <div class="latest-copy"><h3>Suggestion Form Generator</h3><p>I worked on the relational database, validation, and submission workflow for an internal university application.</p><ul class="tag-list" aria-label="Technologies"><li>PHP</li><li>MySQL</li><li>HTML</li><li>CSS</li></ul><a class="text-link" href="projects.html#suggestion">Inside the project <span aria-hidden="true">↗</span></a></div>
         </div>
-        <div class="mt-8 pt-6 text-center">
-            <p class="text-sm">© 2026 Liliana.dev. All rights reserved.</p>
+      </div>
+    </section>
+
+    <section class="section professional-section" id="professional-experience" aria-labelledby="professional-title">
+      <div class="container section-inner">
+        <div class="section-heading"><div><p class="eyebrow">Experience behind the work</p><h2 id="professional-title">Professional Experience</h2></div><a class="text-link" href="Resume-Liliana-Martinez.pdf">Full resume <span aria-hidden="true">↗</span></a></div>
+        <div class="professional-grid"><div class="professional-role"><span class="date-badge">2022–2026</span><h3>Web Services<br>Student Worker</h3><p>Texas A&amp;M University–San Antonio</p><a class="text-link" href="about.html#experience">More about my experience <span aria-hidden="true">→</span></a></div>
+          <div class="experience-points"><article><span class="point-number" aria-hidden="true">01</span><div><h4>Application development</h4><p>Develop and maintain internal applications with PHP, MySQL, HTML, CSS, JavaScript, and Git.</p></div></article><article><span class="point-number" aria-hidden="true">02</span><div><h4>Forms &amp; relational data</h4><p>Build database-backed forms with validation, record management, timestamps, status tracking, and user relationships.</p></div></article><article><span class="point-number" aria-hidden="true">03</span><div><h4>Troubleshooting &amp; collaboration</h4><p>Investigate application and database issues, test fixes, and explain solutions to technical and nontechnical users.</p></div></article></div>
         </div>
-        </div>
-    </footer>
+      </div>
+    </section>
+
+    <section class="section inverse contact-section" aria-labelledby="contact-title"><div class="container section-inner"><p class="eyebrow">Good things start with a conversation</p><h2 id="contact-title">Let’s make a connection.</h2><div class="contact-actions"><a class="button" href="mailto:lilianafinona3@gmail.com">Say hello <span aria-hidden="true">↗</span></a><a class="text-link" href="https://www.linkedin.com/in/liliana-martinez-/">Find me on LinkedIn <span aria-hidden="true">↗</span></a></div></div></section>
+  </main>
+  <div id="site-footer"></div>
 </body>
 </html>

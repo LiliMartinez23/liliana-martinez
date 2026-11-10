@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">Weather Data Pipeline workflow illustration</title>
+  <desc id="desc">Workflow illustration, not an application screenshot. A cron schedule runs a Bash workflow that loads an input weather file into staging, processes records in MySQL, and preserves archived input and processing logs.</desc>
+  <defs>
+    <style>:root{--primary:#fff9f1;--secondary:#16222d;--accent:#9a694e}.type{font-family:Arial,Helvetica,sans-serif;fill:var(--secondary)}.label{font-size:14px;font-weight:700;letter-spacing:2.5px}.heading{font-size:42px;font-weight:700;letter-spacing:-1.2px}.node-title{font-size:22px;font-weight:700;letter-spacing:-.4px}.detail{font-size:17px}.muted{fill-opacity:.66}.line{fill:none;stroke:var(--secondary);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.accent-line{fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}</style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="m2 1 5 4-5 4" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <rect width="1200" height="750" rx="36" fill="var(--primary)"/>
+  <rect x="22" y="22" width="1156" height="706" rx="25" fill="var(--secondary)" fill-opacity=".025" stroke="var(--secondary)" stroke-opacity=".09"/>
+  <text class="type label muted" x="64" y="79">WORKFLOW ILLUSTRATION</text>
+  <text class="type heading" x="64" y="141">Weather data pipeline</text>
+  <text class="type detail muted" x="64" y="179">A scheduled workflow for recurring weather-data imports.</text>
+  <path d="M64 214H1136" class="line" stroke-opacity=".13"/>
+  <g transform="translate(1030 94)">
+    <circle cx="36" cy="14" r="19" fill="var(--accent)" fill-opacity=".24"/>
+    <path d="M36-18v-7m0 71v7M4 14h-7m71 0h7M13-9l-5-5m56 56 5 5M59-9l5-5" class="accent-line"/>
+    <path d="M7 55a17 17 0 0 1-1-34 24 24 0 0 1 46 4 15 15 0 1 1 2 30Z" fill="var(--primary)" stroke="var(--secondary)" stroke-width="2"/>
+  </g>
+  <g transform="translate(64 254)">
+    <rect width="264" height="48" rx="24" fill="var(--accent)" fill-opacity=".1"/>
+    <circle cx="27" cy="24" r="10" class="accent-line"/>
+    <path d="M27 17v7l5 3" class="accent-line"/>
+    <text class="type detail" x="48" y="30">cron · scheduled runs</text>
+  </g>
+  <path d="M341 278h410q22 0 22 22v38" class="accent-line" stroke-dasharray="5 8" stroke-opacity=".6" marker-end="url(#arrow)"/>
+  <g transform="translate(64 362)">
+    <rect width="230" height="222" rx="18" fill="var(--primary)" stroke="var(--secondary)" stroke-opacity=".16"/>
+    <rect x="23" y="24" width="52" height="52" rx="14" fill="var(--accent)" fill-opacity=".12"/>
+    <path d="M39 36h15l8 8v20H39Z M54 36v9h8 M44 52h12m-12 6h9" class="accent-line"/>
+    <text class="type node-title" x="23" y="119">Input weather file</text>
+    <text class="type detail muted" x="23" y="154">Incoming weather</text>
+    <text class="type detail muted" x="23" y="179">observations</text>
+  </g>
+  <path d="M305 473h35" class="accent-line" marker-end="url(#arrow)"/>
+  <g transform="translate(350 362)">
+    <rect width="230" height="222" rx="18" fill="var(--primary)" stroke="var(--secondary)" stroke-opacity=".16"/>
+    <rect x="23" y="24" width="52" height="52" rx="14" fill="var(--accent)" fill-opacity=".12"/>
+    <path d="M36 39h26v26H36Z M36 48h26m-26 8h26M45 39v26" class="accent-line"/>
+    <text class="type node-title" x="23" y="119">Staging table</text>
+    <text class="type detail muted" x="23" y="154">Load input into</text>
+    <text class="type detail muted" x="23" y="179">a staging table</text>
+  </g>
+  <path d="M591 473h35" class="accent-line" marker-end="url(#arrow)"/>
+  <g transform="translate(636 362)">
+    <rect width="230" height="222" rx="18" fill="var(--secondary)"/>
+    <rect x="23" y="24" width="52" height="52" rx="14" fill="var(--primary)" fill-opacity=".12"/>
+    <g fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"><ellipse cx="49" cy="41" rx="13" ry="5"/><path d="M36 41v20c0 7 26 7 26 0V41M36 51c0 7 26 7 26 0"/></g>
+    <text class="type node-title" x="23" y="119" style="fill:var(--primary)">MySQL processing</text>
+    <text class="type detail" x="23" y="154" style="fill:var(--primary);fill-opacity:.76">Move records into</text>
+    <text class="type detail" x="23" y="179" style="fill:var(--primary);fill-opacity:.76">the destination table</text>
+  </g>
+  <path d="M877 473h35" class="accent-line" marker-end="url(#arrow)"/>
+  <g transform="translate(922 362)">
+    <rect width="214" height="222" rx="18" fill="var(--primary)" stroke="var(--secondary)" stroke-opacity=".16"/>
+    <rect x="23" y="24" width="52" height="52" rx="14" fill="var(--accent)" fill-opacity=".12"/>
+    <path d="M35 42h11l4 5h14v18H35Z M35 42v-5h13l4 5h12v5M42 55h14m-14 5h10" class="accent-line"/>
+    <text class="type node-title" x="23" y="119">Archive &amp; logs</text>
+    <text class="type detail muted" x="23" y="154">Preserve inputs</text>
+    <text class="type detail muted" x="23" y="179">and processing activity</text>
+  </g>
+  <path d="M64 634H1136" class="line" stroke-opacity=".13"/>
+  <text class="type label muted" x="64" y="680">BASH / MYSQL / CRON</text>
+  <text class="type detail muted" x="1136" y="680" text-anchor="end">From input to a repeatable process</text>
+</svg>
