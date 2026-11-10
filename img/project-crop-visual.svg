@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">Faculty profile image cropping interface illustration</title>
+  <desc id="desc">An anonymous avatar inside adjustable crop handles, with a round preview and reset and use photo controls. This is an interface illustration, not an application screenshot.</desc>
+  <style>:root{--primary:#fff9f1;--secondary:#16222d;--accent:#9a694e;--surface:#ffffff}text{font-family:Arial,sans-serif;fill:var(--secondary)}.small{font-size:24px}.label{font-size:26px;font-weight:600}</style>
+  <defs><clipPath id="photo"><rect x="107" y="174" width="604" height="457" rx="18"/></clipPath><clipPath id="preview"><circle cx="934" cy="355" r="111"/></clipPath></defs>
+  <rect width="1200" height="750" rx="30" fill="var(--primary)"/>
+  <rect x="65" y="57" width="1080" height="650" rx="30" fill="var(--secondary)" opacity=".08"/>
+  <rect x="55" y="42" width="1090" height="650" rx="30" fill="var(--surface)"/>
+  <text x="107" y="119" style="font-size:33px;font-weight:600">Crop your profile photo</text>
+  <circle cx="1084" cy="105" r="22" fill="var(--primary)"/>
+  <path d="m1076 97 16 16m0-16-16 16" stroke="var(--secondary)" stroke-width="3" stroke-linecap="round"/>
+  <g clip-path="url(#photo)">
+    <rect x="107" y="174" width="604" height="457" fill="var(--accent)" opacity=".3"/>
+    <path d="M155 675c0-150 103-236 254-236s254 86 254 236" fill="var(--secondary)"/>
+    <ellipse cx="409" cy="336" rx="94" ry="109" fill="var(--secondary)"/>
+    <rect x="107" y="174" width="604" height="457" fill="var(--secondary)" opacity=".12"/>
+  </g>
+  <rect x="238" y="204" width="342" height="342" rx="2" fill="none" stroke="var(--primary)" stroke-width="5"/>
+  <g stroke="var(--primary)" stroke-width="2" opacity=".7"><path d="M352 204v342m114-342v342M238 318h342M238 432h342"/></g>
+  <g fill="var(--primary)" stroke="var(--secondary)" stroke-width="2"><rect x="230" y="196" width="17" height="17" rx="3"/><rect x="572" y="196" width="17" height="17" rx="3"/><rect x="230" y="538" width="17" height="17" rx="3"/><rect x="572" y="538" width="17" height="17" rx="3"/></g>
+  <text x="934" y="205" text-anchor="middle" class="label">Preview</text>
+  <g clip-path="url(#preview)"><circle cx="934" cy="355" r="111" fill="var(--primary)"/><path d="M808 479c0-90 51-140 126-140s126 50 126 140" fill="var(--secondary)"/><ellipse cx="934" cy="298" rx="47" ry="55" fill="var(--secondary)"/></g>
+  <circle cx="934" cy="355" r="112" fill="none" stroke="var(--secondary)" stroke-opacity=".2" stroke-width="3"/>
+  <text x="934" y="519" text-anchor="middle" class="small">Ready for a faculty profile.</text>
+  <rect x="781" y="563" width="124" height="62" rx="31" fill="var(--primary)"/>
+  <text x="843" y="603" text-anchor="middle" class="small">Reset</text>
+  <rect x="924" y="563" width="167" height="62" rx="31" fill="var(--accent)"/>
+  <text x="1007" y="603" text-anchor="middle" style="font-size:24px;fill:var(--surface);font-weight:600">Use photo</text>
+</svg>

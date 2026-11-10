@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">Voter Data Integrity and Audit System workflow illustration</title>
+  <desc id="desc">Conceptual workflow illustration, not an application screenshot or the actual database schema. Primary and foreign keys connect voting records with related data. Constraints and MySQL triggers enforce validation rules and record database changes in an audit log.</desc>
+  <defs>
+    <style>:root{--primary:#fff9f1;--secondary:#16222d;--accent:#9a694e}.type{font-family:Arial,Helvetica,sans-serif;fill:var(--secondary)}.label{font-size:14px;font-weight:700;letter-spacing:2.5px}.heading{font-size:42px;font-weight:700;letter-spacing:-1.2px}.node-title{font-size:23px;font-weight:700;letter-spacing:-.4px}.detail{font-size:17px}.field{font-size:16px}.muted{fill-opacity:.66}.line{fill:none;stroke:var(--secondary);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.accent-line{fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}</style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="m2 1 5 4-5 4" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <rect width="1200" height="750" rx="36" fill="var(--primary)"/>
+  <rect x="22" y="22" width="1156" height="706" rx="25" fill="var(--secondary)" fill-opacity=".025" stroke="var(--secondary)" stroke-opacity=".09"/>
+  <text class="type label muted" x="64" y="79">WORKFLOW ILLUSTRATION</text>
+  <text class="type heading" x="64" y="141">Data integrity, by design.</text>
+  <text class="type detail muted" x="64" y="179">Relational records, validation rules, and a history of changes.</text>
+  <g transform="translate(1050 91)">
+    <path d="M31 0 57 10v25c0 19-26 34-26 34S5 54 5 35V10Z" fill="var(--accent)" fill-opacity=".1" stroke="var(--accent)" stroke-width="2"/>
+    <path d="m19 33 9 9 17-20" class="accent-line"/>
+  </g>
+  <path d="M64 214H1136" class="line" stroke-opacity=".13"/>
+  <g transform="translate(64 263)">
+    <rect width="320" height="250" rx="18" fill="var(--primary)" stroke="var(--secondary)" stroke-opacity=".16"/>
+    <path d="M0 73h320" class="line" stroke-opacity=".12"/>
+    <text class="type node-title" x="26" y="46">Voting records</text>
+    <rect x="25" y="99" width="36" height="28" rx="7" fill="var(--accent)" fill-opacity=".13"/>
+    <text class="type" x="43" y="119" text-anchor="middle" style="font-size:12px;font-weight:700">PK</text>
+    <text class="type field" x="77" y="119">Primary key</text>
+    <path d="M25 143h270" class="line" stroke-opacity=".08"/>
+    <rect x="25" y="162" width="36" height="28" rx="7" fill="var(--secondary)" fill-opacity=".07"/>
+    <text class="type" x="43" y="182" text-anchor="middle" style="font-size:12px;font-weight:700">FK</text>
+    <text class="type field" x="77" y="182">Foreign-key reference</text>
+    <text class="type detail muted" x="25" y="224">Structured voting data</text>
+  </g>
+  <g transform="translate(464 263)">
+    <rect width="288" height="250" rx="18" fill="var(--primary)" stroke="var(--secondary)" stroke-opacity=".16"/>
+    <path d="M0 73h288" class="line" stroke-opacity=".12"/>
+    <text class="type node-title" x="26" y="46">Related records</text>
+    <rect x="25" y="99" width="36" height="28" rx="7" fill="var(--accent)" fill-opacity=".13"/>
+    <text class="type" x="43" y="119" text-anchor="middle" style="font-size:12px;font-weight:700">PK</text>
+    <text class="type field" x="77" y="119">Referenced key</text>
+    <path d="M25 143h238" class="line" stroke-opacity=".08"/>
+    <path d="M26 174h110m-110 18h166" class="line" stroke-opacity=".18"/>
+    <text class="type detail muted" x="25" y="224">Connected through keys</text>
+  </g>
+  <path d="M384 439h26q14 0 14-14v-35q0-14 14-14h26" class="accent-line"/>
+  <circle cx="384" cy="439" r="4" fill="var(--accent)"/>
+  <circle cx="464" cy="376" r="4" fill="var(--accent)"/>
+  <g transform="translate(832 263)">
+    <rect width="304" height="250" rx="18" fill="var(--secondary)"/>
+    <path d="M0 73h304" stroke="var(--primary)" stroke-opacity=".16"/>
+    <text class="type node-title" x="26" y="46" style="fill:var(--primary)">Audit log</text>
+    <g fill="none" stroke="var(--primary)" stroke-linecap="round" stroke-opacity=".6" stroke-width="2"><circle cx="30" cy="111" r="3"/><path d="M44 111h108m-108 15h174"/><circle cx="30" cy="160" r="3"/><path d="M44 160h139m-139 15h159"/></g>
+    <text class="type detail" x="25" y="224" style="fill:var(--primary);fill-opacity:.76">Record database changes</text>
+  </g>
+  <path d="M752 389h68" class="accent-line" marker-end="url(#arrow)"/>
+  <g transform="translate(64 555)">
+    <rect width="1072" height="62" rx="13" fill="var(--accent)" fill-opacity=".09"/>
+    <path d="m26 31 6 6 11-13" class="accent-line"/>
+    <text class="type detail" x="59" y="38"><tspan font-weight="700">Constraints &amp; triggers</tspan><tspan dx="20" fill-opacity=".7">Validate records · enforce rules · capture changes</tspan></text>
+  </g>
+  <path d="M64 652H1136" class="line" stroke-opacity=".13"/>
+  <text class="type label muted" x="64" y="694">SQL / MYSQL / RELATIONAL DESIGN</text>
+  <text class="type detail muted" x="1136" y="694" text-anchor="end">Conceptual view of the workflow</text>
+</svg>

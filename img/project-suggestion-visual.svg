@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">Suggestion form interface illustration</title>
+  <desc id="desc">An illustrative suggestion form with a subject field, message area, submit action, and submission review statuses. This is not an application screenshot.</desc>
+  <style>:root{--primary:#fff9f1;--secondary:#16222d;--accent:#9a694e;--surface:#ffffff}text{font-family:Arial,sans-serif;fill:var(--secondary)}.muted{opacity:.65}.small{font-size:24px}.label{font-size:25px;font-weight:600}</style>
+  <rect width="1200" height="750" rx="30" fill="var(--primary)"/>
+  <rect x="65" y="57" width="1080" height="650" rx="30" fill="var(--secondary)" opacity=".08"/>
+  <rect x="55" y="42" width="1090" height="650" rx="30" fill="var(--surface)"/>
+  <path d="M85 42h1030a30 30 0 0 1 30 30v62H55V72a30 30 0 0 1 30-30Z" fill="var(--secondary)"/>
+  <g fill="var(--primary)" opacity=".6"><circle cx="98" cy="88" r="8"/><circle cx="126" cy="88" r="8"/><circle cx="154" cy="88" r="8"/></g>
+  <text x="600" y="98" text-anchor="middle" style="fill:var(--primary);font-size:25px">Suggestion Form</text>
+  <text x="110" y="198" style="font-size:34px;font-weight:600">Share an idea.</text>
+  <text x="110" y="240" class="small muted">A clear path from submission to review.</text>
+  <text x="110" y="301" class="label">Subject</text>
+  <rect x="110" y="320" width="980" height="63" rx="13" fill="var(--primary)" stroke="var(--secondary)" stroke-opacity=".18" stroke-width="2"/>
+  <text x="135" y="361" class="small muted">What would you like to suggest?</text>
+  <text x="110" y="429" class="label">Your suggestion</text>
+  <rect x="110" y="448" width="980" height="112" rx="13" fill="var(--primary)" stroke="var(--secondary)" stroke-opacity=".18" stroke-width="2"/>
+  <g stroke="var(--secondary)" stroke-opacity=".16" stroke-width="8" stroke-linecap="round"><path d="M140 481h530"/><path d="M140 512h700"/></g>
+  <rect x="830" y="589" width="260" height="62" rx="31" fill="var(--accent)"/>
+  <text x="960" y="628" text-anchor="middle" style="fill:var(--surface);font-size:24px;font-weight:600">Submit suggestion</text>
+  <g class="small"><text x="110" y="628">Submitted</text><text x="290" y="628">In progress</text><text x="490" y="628">Completed</text></g>
+  <g stroke="var(--accent)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M247 620h21m-8-7 8 7-8 7"/><path d="M446 620h21m-8-7 8 7-8 7"/></g>
+</svg>
