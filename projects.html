@@ -7,7 +7,7 @@
   <title>Projects | Liliana Martinez</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito+Sans:ital,wght@0,400;0,500;0,600;0,800;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/site.js" defer></script>
 </head>
@@ -33,7 +33,7 @@
       </div>
     </section>
 
-    <section class="section project-row projects-featured inverse" id="work-suggestion" aria-labelledby="suggestion-title">
+    <section class="section project-row inverse" id="work-suggestion" aria-labelledby="suggestion-title">
       <div class="section-inner container project-grid">
         <figure class="project-figure">
           <img class="project-cover project-visual" src="img/project-suggestion-visual.svg" alt="Interface illustration of a suggestion form with submission and review statuses" width="1200" height="750" fetchpriority="high">
@@ -49,49 +49,50 @@
       </div>
     </section>
 
-    <section class="section more-projects" aria-labelledby="more-projects-title">
-      <div class="section-inner container">
-        <div class="more-projects-heading">
-          <p class="eyebrow">More work / Web · Data · Automation</p>
-          <h2 id="more-projects-title">More projects.</h2>
+    <section class="section project-row" id="work-crop" aria-labelledby="crop-title">
+      <div class="section-inner container project-grid">
+        <figure class="project-figure">
+          <img class="project-cover project-visual" src="img/project-crop-visual.svg" alt="Interface illustration of profile-photo crop handles, a preview, and export controls" width="1200" height="750" loading="lazy" decoding="async">
+          <figcaption class="visually-hidden">Interface illustration, not an application screenshot.</figcaption>
+        </figure>
+        <div class="project-copy">
+          <p class="eyebrow">Web / Image tools</p>
+          <h2 id="crop-title">Faculty Profile Image Crop Tool</h2>
+          <p class="project-contribution">I built an adjustable crop preview with input validation and export to upload-ready JPEG files.</p>
+          <ul class="tag-list" aria-label="Technologies"><li>JavaScript</li><li>PHP</li><li>Cropper.js</li><li>Bootstrap</li></ul>
+          <button class="text-link" type="button" data-open-project="crop" aria-haspopup="dialog" aria-controls="project-crop">View case study <span aria-hidden="true">↗</span></button>
         </div>
-        <div class="project-card-grid">
-          <article class="project-card" id="work-crop" aria-labelledby="crop-title">
-            <figure class="project-figure">
-              <img class="project-cover project-visual" src="img/project-crop-visual.svg" alt="Interface illustration of profile-photo crop handles, a preview, and export controls" width="1200" height="750" loading="lazy" decoding="async">
-              <figcaption class="visually-hidden">Interface illustration, not an application screenshot.</figcaption>
-            </figure>
-            <div class="project-copy">
-              <h3 id="crop-title">Faculty Profile Image Crop Tool</h3>
-              <p class="project-contribution">I built an adjustable crop preview with input validation and export to upload-ready JPEG files.</p>
-              <ul class="tag-list" aria-label="Technologies"><li>JavaScript</li><li>PHP</li><li>Cropper.js</li><li>Bootstrap</li></ul>
-              <button class="text-link" type="button" data-open-project="crop" aria-haspopup="dialog" aria-controls="project-crop">View case study <span aria-hidden="true">↗</span></button>
-            </div>
-          </article>
-          <article class="project-card" id="work-weather" aria-labelledby="weather-title">
-            <figure class="project-figure">
-              <img class="project-cover project-visual" src="img/project-weather-visual.svg" alt="Workflow illustration of weather data moving through staging, MySQL processing, and archiving" width="1200" height="750" loading="lazy" decoding="async">
-              <figcaption class="visually-hidden">Workflow illustration based on the project case study.</figcaption>
-            </figure>
-            <div class="project-copy">
-              <h3 id="weather-title">Weather Data Pipeline</h3>
-              <p class="project-contribution">I automated recurring MySQL imports with staged processing, logs, file archiving, and cron.</p>
-              <ul class="tag-list" aria-label="Technologies"><li>Bash</li><li>MySQL</li><li>Linux / WSL</li><li>cron</li></ul>
-              <button class="text-link" type="button" data-open-project="weather" aria-haspopup="dialog" aria-controls="project-weather">View case study <span aria-hidden="true">↗</span></button>
-            </div>
-          </article>
-          <article class="project-card" id="work-audit" aria-labelledby="audit-title">
-            <figure class="project-figure">
-              <img class="project-cover project-visual" src="img/project-audit-visual.svg" alt="Workflow illustration connecting voting records, validation constraints and triggers, and an audit trail" width="1200" height="750" loading="lazy" decoding="async">
-              <figcaption class="visually-hidden">Workflow illustration based on the project case study.</figcaption>
-            </figure>
-            <div class="project-copy">
-              <h3 id="audit-title">Voter Data Integrity &amp; Audit System</h3>
-              <p class="project-contribution">I designed relational tables, constraints, and MySQL triggers to validate voting records and track changes.</p>
-              <ul class="tag-list" aria-label="Technologies"><li>SQL</li><li>MySQL</li><li>Constraints</li><li>Triggers</li></ul>
-              <button class="text-link" type="button" data-open-project="audit" aria-haspopup="dialog" aria-controls="project-audit">View case study <span aria-hidden="true">↗</span></button>
-            </div>
-          </article>
+      </div>
+    </section>
+
+    <section class="section project-row inverse" id="work-weather" aria-labelledby="weather-title">
+      <div class="section-inner container project-grid">
+        <figure class="project-figure">
+          <img class="project-cover project-visual" src="img/project-weather-visual.svg" alt="Workflow illustration of weather data moving through staging, MySQL processing, and archiving" width="1200" height="750" loading="lazy" decoding="async">
+          <figcaption class="visually-hidden">Workflow illustration based on the project case study.</figcaption>
+        </figure>
+        <div class="project-copy">
+          <p class="eyebrow">Data / Automation</p>
+          <h2 id="weather-title">Weather Data Pipeline</h2>
+          <p class="project-contribution">I automated recurring MySQL imports with staged processing, logs, file archiving, and cron.</p>
+          <ul class="tag-list" aria-label="Technologies"><li>Bash</li><li>MySQL</li><li>Linux / WSL</li><li>cron</li></ul>
+          <button class="text-link" type="button" data-open-project="weather" aria-haspopup="dialog" aria-controls="project-weather">View case study <span aria-hidden="true">↗</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section project-row" id="work-audit" aria-labelledby="audit-title">
+      <div class="section-inner container project-grid">
+        <figure class="project-figure">
+          <img class="project-cover project-visual" src="img/project-audit-visual.svg" alt="Workflow illustration connecting voting records, validation constraints and triggers, and an audit trail" width="1200" height="750" loading="lazy" decoding="async">
+          <figcaption class="visually-hidden">Workflow illustration based on the project case study.</figcaption>
+        </figure>
+        <div class="project-copy">
+          <p class="eyebrow">Data / Integrity</p>
+          <h2 id="audit-title">Voter Data Integrity &amp; Audit System</h2>
+          <p class="project-contribution">I designed relational tables, constraints, and MySQL triggers to validate voting records and track changes.</p>
+          <ul class="tag-list" aria-label="Technologies"><li>SQL</li><li>MySQL</li><li>Constraints</li><li>Triggers</li></ul>
+          <button class="text-link" type="button" data-open-project="audit" aria-haspopup="dialog" aria-controls="project-audit">View case study <span aria-hidden="true">↗</span></button>
         </div>
       </div>
     </section>
