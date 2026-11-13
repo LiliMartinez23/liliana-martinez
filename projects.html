@@ -1,20 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-palette="7">
 <head>
+  <meta name="theme-color" content="#211f20">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Selected web applications, database projects, and data workflows by Liliana Martinez, with details of her contributions.">
   <title>Projects | Liliana Martinez</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito+Sans:ital,wght@0,400;0,500;0,600;0,800;1,400;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=dc1f1789a683">
   <script src="js/site.js" defer></script>
 </head>
 <body data-page="projects">
   <a class="skip-link" href="#main">Skip to main content</a>
   <div id="site-header"></div>
-  <div id="theme-preview"></div>
+
   <noscript><nav aria-label="Main navigation"><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="projects.html" aria-current="page">Projects</a> · <a href="blogs.html">Blogs</a></nav></noscript>
 
   <main id="main" tabindex="-1">
@@ -23,49 +24,44 @@
         <p class="eyebrow">Selected projects / Web · Data · Automation</p>
         <h1 class="display-title" id="projects-title">Practical work.<br>Real problems.</h1>
         <p class="page-lede">Web applications, database design, and the workflows in between. A closer look at the problems I’ve worked on and the decisions behind the code.</p>
-        <nav class="project-index" aria-label="Jump to a project">
-          <a href="#work-suggestion"><span>01</span> Suggestion forms <span aria-hidden="true">↓</span></a>
-          <a href="#work-crop"><span>02</span> Image crop tool <span aria-hidden="true">↓</span></a>
-          <a href="#work-weather"><span>03</span> Weather pipeline <span aria-hidden="true">↓</span></a>
-          <a href="#work-audit"><span>04</span> Data integrity <span aria-hidden="true">↓</span></a>
-        </nav>
         <noscript><p>Project summaries are below. Enable JavaScript to open the full case studies.</p></noscript>
       </div>
     </section>
 
-    <section class="section project-row inverse" id="work-suggestion" aria-labelledby="suggestion-title">
+    <div class="projects-collection">
+    <section class="section project-row inverse compact-section" id="work-suggestion" aria-labelledby="suggestion-title">
       <div class="section-inner container project-grid">
         <figure class="project-figure">
-          <img class="project-cover project-visual" src="img/project-suggestion-visual.svg" alt="Interface illustration of a suggestion form with submission and review statuses" width="1200" height="750" fetchpriority="high">
+          <img class="project-cover project-visual" src="img/project-suggestion-visual.svg" alt="Interface illustration of the Web Services team’s internal Suggestion Form and review statuses" width="1200" height="750" fetchpriority="high">
           <figcaption class="visually-hidden">Interface illustration, not an application screenshot.</figcaption>
         </figure>
         <div class="project-copy">
           <p class="eyebrow">Latest Project</p>
           <h2 id="suggestion-title">Suggestion Form Generator</h2>
-          <p class="project-contribution">I worked on the schema, validation, and submission workflow connecting university suggestions with users and review statuses.</p>
+          <p class="project-contribution">I developed an internal suggestion workflow for our Web Services team’s Web Dev Portal, as part of my work on its Audit and Suggestion Form generators.</p>
           <ul class="tag-list" aria-label="Technologies"><li>PHP</li><li>MySQL</li><li>HTML</li><li>CSS</li></ul>
           <button class="text-link" type="button" data-open-project="suggestion" aria-haspopup="dialog" aria-controls="project-suggestion">View case study <span aria-hidden="true">↗</span></button>
         </div>
       </div>
     </section>
 
-    <section class="section project-row" id="work-crop" aria-labelledby="crop-title">
+    <section class="section project-row compact-section" id="work-crop" aria-labelledby="crop-title">
       <div class="section-inner container project-grid">
         <figure class="project-figure">
-          <img class="project-cover project-visual" src="img/project-crop-visual.svg" alt="Interface illustration of profile-photo crop handles, a preview, and export controls" width="1200" height="750" loading="lazy" decoding="async">
+          <img class="project-cover project-visual" src="img/project-crop-visual.svg" alt="Interface illustration of a fixed 1:1 crop, square faculty-photo preview, and export controls" width="1200" height="750" loading="lazy" decoding="async">
           <figcaption class="visually-hidden">Interface illustration, not an application screenshot.</figcaption>
         </figure>
         <div class="project-copy">
           <p class="eyebrow">Web / Image tools</p>
           <h2 id="crop-title">Faculty Profile Image Crop Tool</h2>
-          <p class="project-contribution">I built an adjustable crop preview with input validation and export to upload-ready JPEG files.</p>
+          <p class="project-contribution">I noticed inconsistent profile-photo dimensions on HB2504 department pages and proposed a crop tool that lets faculty adjust their photos within a fixed 1:1 ratio.</p>
           <ul class="tag-list" aria-label="Technologies"><li>JavaScript</li><li>PHP</li><li>Cropper.js</li><li>Bootstrap</li></ul>
           <button class="text-link" type="button" data-open-project="crop" aria-haspopup="dialog" aria-controls="project-crop">View case study <span aria-hidden="true">↗</span></button>
         </div>
       </div>
     </section>
 
-    <section class="section project-row inverse" id="work-weather" aria-labelledby="weather-title">
+    <section class="section project-row inverse compact-section" id="work-weather" aria-labelledby="weather-title">
       <div class="section-inner container project-grid">
         <figure class="project-figure">
           <img class="project-cover project-visual" src="img/project-weather-visual.svg" alt="Workflow illustration of weather data moving through staging, MySQL processing, and archiving" width="1200" height="750" loading="lazy" decoding="async">
@@ -81,7 +77,7 @@
       </div>
     </section>
 
-    <section class="section project-row" id="work-audit" aria-labelledby="audit-title">
+    <section class="section project-row compact-section" id="work-audit" aria-labelledby="audit-title">
       <div class="section-inner container project-grid">
         <figure class="project-figure">
           <img class="project-cover project-visual" src="img/project-audit-visual.svg" alt="Workflow illustration connecting voting records, validation constraints and triggers, and an audit trail" width="1200" height="750" loading="lazy" decoding="async">
@@ -97,7 +93,9 @@
       </div>
     </section>
 
-    <section class="section inverse contact-section" aria-labelledby="projects-contact-title">
+    </div>
+
+    <section class="section inverse contact-section compact-section" aria-labelledby="projects-contact-title">
       <div class="section-inner container">
         <div><p class="eyebrow">Keep the conversation going</p>
         <h2 id="projects-contact-title">Let’s connect.</h2>
@@ -108,20 +106,23 @@
 
     <dialog class="project-dialog" id="project-suggestion" aria-labelledby="suggestion-dialog-title">
       <div class="dialog-body">
-        <button class="dialog-close" type="button" data-close-dialog autofocus>Close <span aria-hidden="true">×</span></button>
-        <p class="eyebrow">Case study / Web Services</p>
+        <div class="dialog-header">
+          <p class="eyebrow">Case study / Web Services</p>
+          <button class="dialog-close" type="button" data-close-dialog autofocus>Close <span aria-hidden="true">×</span></button>
+        </div>
         <h2 class="dialog-heading" id="suggestion-dialog-title">Suggestion Form Generator</h2>
         <section class="dialog-section" aria-labelledby="suggestion-problem">
           <h3 id="suggestion-problem">The problem</h3>
-          <p>University suggestions need a place to be collected, reviewed, and managed after submission.</p>
+          <p>Our Web Services team uses the Web Dev Portal internally to keep links, documents, website audit reports, and other resources together. We needed a way to collect suggestions from teammates about anything that should be changed or updated within the team.</p>
         </section>
-        <section class="dialog-section" aria-labelledby="suggestion-contribution">
+        <section class="dialog-section dialog-contribution" aria-labelledby="suggestion-contribution">
           <h3 id="suggestion-contribution">My contribution</h3>
-          <p>I worked on the relational schema, input validation, and submission workflow. Records connect suggestions with users and review statuses, with generated IDs and timestamps. Create, read, update, and delete operations support ongoing record management.</p>
+          <p>The portal’s main developer brought me into the project to develop two form generators: the Audit Form, for audit reports on the websites our team manages, and the Suggestion Form, for ideas about internal changes and updates.</p>
+          <p>For the Suggestion Form, I worked on the relational schema, input validation, and submission workflow. Records connect suggestions with users and review statuses, with generated IDs and timestamps. Create, read, update, and delete operations support ongoing record management.</p>
         </section>
-        <section class="dialog-section" aria-labelledby="suggestion-workflow">
+        <section class="dialog-section dialog-workflow" aria-labelledby="suggestion-workflow">
           <h3 id="suggestion-workflow">From submission to review</h3>
-          <ol class="workflow"><li><strong>Collect</strong><span>A PHP form validates submitted information.</span></li><li><strong>Store</strong><span>MySQL keeps the record and its user association.</span></li><li><strong>Review</strong><span>Staff view and manage suggestions and their statuses.</span></li></ol>
+          <ol class="workflow"><li><strong>Collect</strong><span>A teammate submits an internal suggestion through a PHP form.</span></li><li><strong>Store</strong><span>MySQL keeps the validated suggestion and its user association.</span></li><li><strong>Review</strong><span>The Web Services team reviews suggestions and updates their statuses.</span></li></ol>
         </section>
         <ul class="tag-list" aria-label="Technologies"><li>PHP</li><li>MySQL</li><li>HTML</li><li>CSS</li></ul>
       </div>
@@ -129,20 +130,23 @@
 
     <dialog class="project-dialog" id="project-crop" aria-labelledby="crop-dialog-title">
       <div class="dialog-body">
-        <button class="dialog-close" type="button" data-close-dialog autofocus>Close <span aria-hidden="true">×</span></button>
-        <p class="eyebrow">Case study / Web Services</p>
+        <div class="dialog-header">
+          <p class="eyebrow">Case study / Web Services</p>
+          <button class="dialog-close" type="button" data-close-dialog autofocus>Close <span aria-hidden="true">×</span></button>
+        </div>
         <h2 class="dialog-heading" id="crop-dialog-title">Faculty Profile Image Crop Tool</h2>
         <section class="dialog-section" aria-labelledby="crop-problem">
           <h3 id="crop-problem">The problem</h3>
-          <p>Faculty profile photos need to be cropped and prepared before upload in the HB2504 workflow.</p>
+          <p>HB2504 houses faculty and staff profiles for the university, including department pages that list those people. I noticed that profile images had inconsistent dimensions, making the department listings look uneven.</p>
         </section>
-        <section class="dialog-section" aria-labelledby="crop-contribution">
+        <section class="dialog-section dialog-contribution" aria-labelledby="crop-contribution">
           <h3 id="crop-contribution">My contribution</h3>
-          <p>I built the cropping workflow with Cropper.js and Bootstrap, added client-side validation, and converted cropped images into upload-ready JPEG files.</p>
+          <p>I raised the issue and suggested a crop tool that would let faculty adjust their photos while keeping a fixed 1:1 aspect ratio. That way, profile images on department pages would be uniform without taking away faculty control over how their photos are framed.</p>
+          <p>I built the cropping workflow with Cropper.js and Bootstrap, added client-side validation, and converted the square crops into upload-ready JPEG files.</p>
         </section>
-        <section class="dialog-section" aria-labelledby="crop-workflow">
+        <section class="dialog-section dialog-workflow" aria-labelledby="crop-workflow">
           <h3 id="crop-workflow">From original to upload</h3>
-          <ol class="workflow"><li><strong>Select</strong><span>Choose an image and validate the input.</span></li><li><strong>Adjust</strong><span>Move the crop and preview the result.</span></li><li><strong>Export</strong><span>Convert the crop into a JPEG ready for upload.</span></li></ol>
+          <ol class="workflow"><li><strong>Select</strong><span>Choose a faculty photo and validate the input.</span></li><li><strong>Adjust</strong><span>Reposition the photo within a fixed, square 1:1 crop.</span></li><li><strong>Export</strong><span>Export a square JPEG ready for the HB2504 profile.</span></li></ol>
         </section>
         <ul class="tag-list" aria-label="Technologies"><li>JavaScript</li><li>PHP</li><li>Cropper.js</li><li>Bootstrap</li><li>HTML</li><li>CSS</li></ul>
       </div>
@@ -150,18 +154,20 @@
 
     <dialog class="project-dialog" id="project-weather" aria-labelledby="weather-dialog-title">
       <div class="dialog-body">
-        <button class="dialog-close" type="button" data-close-dialog autofocus>Close <span aria-hidden="true">×</span></button>
-        <p class="eyebrow">Case study / Data automation</p>
+        <div class="dialog-header">
+          <p class="eyebrow">Case study / Data automation</p>
+          <button class="dialog-close" type="button" data-close-dialog autofocus>Close <span aria-hidden="true">×</span></button>
+        </div>
         <h2 class="dialog-heading" id="weather-dialog-title">Weather Data Pipeline</h2>
         <section class="dialog-section" aria-labelledby="weather-problem">
           <h3 id="weather-problem">The problem</h3>
           <p>Recurring weather-data files need to be imported into MySQL, with a record of what was processed.</p>
         </section>
-        <section class="dialog-section" aria-labelledby="weather-contribution">
+        <section class="dialog-section dialog-contribution" aria-labelledby="weather-contribution">
           <h3 id="weather-contribution">My contribution</h3>
           <p>I built staged imports, processing logs, and input-file archiving, then scheduled recurring runs with cron. I also diagnosed database connectivity, permission, file-loading, and duplicate-record issues.</p>
         </section>
-        <section class="dialog-section" aria-labelledby="weather-workflow">
+        <section class="dialog-section dialog-workflow" aria-labelledby="weather-workflow">
           <h3 id="weather-workflow">From file to database</h3>
           <ol class="workflow"><li><strong>Stage</strong><span>A Bash script loads incoming data into a staging table.</span></li><li><strong>Process</strong><span>Move records to the destination and log the activity.</span></li><li><strong>Archive</strong><span>Keep the processed input file for later reference.</span></li></ol>
         </section>
@@ -171,18 +177,20 @@
 
     <dialog class="project-dialog" id="project-audit" aria-labelledby="audit-dialog-title">
       <div class="dialog-body">
-        <button class="dialog-close" type="button" data-close-dialog autofocus>Close <span aria-hidden="true">×</span></button>
-        <p class="eyebrow">Case study / Relational database design</p>
+        <div class="dialog-header">
+          <p class="eyebrow">Case study / Relational database design</p>
+          <button class="dialog-close" type="button" data-close-dialog autofocus>Close <span aria-hidden="true">×</span></button>
+        </div>
         <h2 class="dialog-heading" id="audit-dialog-title">Voter Data Integrity &amp; Audit System</h2>
         <section class="dialog-section" aria-labelledby="audit-problem">
           <h3 id="audit-problem">The problem</h3>
           <p>Voting records need consistent validation rules and a history of changes that can be reviewed.</p>
         </section>
-        <section class="dialog-section" aria-labelledby="audit-contribution">
+        <section class="dialog-section dialog-contribution" aria-labelledby="audit-contribution">
           <h3 id="audit-contribution">My contribution</h3>
           <p>I designed relational tables with primary and foreign keys, check constraints, and validation rules. I created MySQL triggers to enforce voting rules and record changes for auditing and troubleshooting.</p>
         </section>
-        <section class="dialog-section" aria-labelledby="audit-workflow">
+        <section class="dialog-section dialog-workflow" aria-labelledby="audit-workflow">
           <h3 id="audit-workflow">From record to audit trail</h3>
           <ol class="workflow"><li><strong>Validate</strong><span>Constraints check incoming records.</span></li><li><strong>Enforce</strong><span>Triggers apply the voting-data rules.</span></li><li><strong>Record</strong><span>Capture changes in an audit record for review.</span></li></ol>
         </section>
