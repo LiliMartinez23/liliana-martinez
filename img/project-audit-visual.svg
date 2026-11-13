@@ -2,7 +2,7 @@
   <title id="title">Voter Data Integrity and Audit System workflow illustration</title>
   <desc id="desc">Conceptual workflow illustration, not an application screenshot or the actual database schema. Primary and foreign keys connect voting records with related data. Constraints and MySQL triggers enforce validation rules and record database changes in an audit log.</desc>
   <defs>
-    <style>:root{--primary:#fff9f1;--secondary:#16222d;--accent:#9a694e}.type{font-family:Arial,Helvetica,sans-serif;fill:var(--secondary)}.label{font-size:14px;font-weight:700;letter-spacing:2.5px}.heading{font-size:42px;font-weight:700;letter-spacing:-1.2px}.node-title{font-size:23px;font-weight:700;letter-spacing:-.4px}.detail{font-size:17px}.field{font-size:16px}.muted{fill-opacity:.66}.line{fill:none;stroke:var(--secondary);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.accent-line{fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}</style>
+    <style>:root{--primary:#211f20;--secondary:#e3dac7;--accent:#c56d3f;--surface:#2a2728;--surface-accent:#352e2b;--line:#51463f}.type{font-family:'DM Sans',Arial,Helvetica,sans-serif;fill:var(--secondary)}.label{font-size:14px;font-weight:700;letter-spacing:2.5px}.heading{font-size:42px;font-weight:700;letter-spacing:-1.2px}.node-title{font-size:23px;font-weight:700;letter-spacing:-.4px}.detail{font-size:17px}.field{font-size:16px}.muted{fill-opacity:.66}.line{fill:none;stroke:var(--secondary);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.accent-line{fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}</style>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="m2 1 5 4-5 4" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
   </defs>
   <rect width="1200" height="750" rx="36" fill="var(--primary)"/>
@@ -16,7 +16,7 @@
   </g>
   <path d="M64 214H1136" class="line" stroke-opacity=".13"/>
   <g transform="translate(64 263)">
-    <rect width="320" height="250" rx="18" fill="var(--primary)" stroke="var(--secondary)" stroke-opacity=".16"/>
+    <rect width="320" height="250" rx="18" fill="var(--surface)" stroke="var(--secondary)" stroke-opacity=".16"/>
     <path d="M0 73h320" class="line" stroke-opacity=".12"/>
     <text class="type node-title" x="26" y="46">Voting records</text>
     <rect x="25" y="99" width="36" height="28" rx="7" fill="var(--accent)" fill-opacity=".13"/>
@@ -29,7 +29,7 @@
     <text class="type detail muted" x="25" y="224">Structured voting data</text>
   </g>
   <g transform="translate(464 263)">
-    <rect width="288" height="250" rx="18" fill="var(--primary)" stroke="var(--secondary)" stroke-opacity=".16"/>
+    <rect width="288" height="250" rx="18" fill="var(--surface)" stroke="var(--secondary)" stroke-opacity=".16"/>
     <path d="M0 73h288" class="line" stroke-opacity=".12"/>
     <text class="type node-title" x="26" y="46">Related records</text>
     <rect x="25" y="99" width="36" height="28" rx="7" fill="var(--accent)" fill-opacity=".13"/>
@@ -43,11 +43,11 @@
   <circle cx="384" cy="439" r="4" fill="var(--accent)"/>
   <circle cx="464" cy="376" r="4" fill="var(--accent)"/>
   <g transform="translate(832 263)">
-    <rect width="304" height="250" rx="18" fill="var(--secondary)"/>
-    <path d="M0 73h304" stroke="var(--primary)" stroke-opacity=".16"/>
-    <text class="type node-title" x="26" y="46" style="fill:var(--primary)">Audit log</text>
-    <g fill="none" stroke="var(--primary)" stroke-linecap="round" stroke-opacity=".6" stroke-width="2"><circle cx="30" cy="111" r="3"/><path d="M44 111h108m-108 15h174"/><circle cx="30" cy="160" r="3"/><path d="M44 160h139m-139 15h159"/></g>
-    <text class="type detail" x="25" y="224" style="fill:var(--primary);fill-opacity:.76">Record database changes</text>
+    <rect width="304" height="250" rx="18" fill="var(--surface-accent)" stroke="var(--accent)" stroke-opacity=".65"/>
+    <path d="M0 73h304" stroke="var(--secondary)" stroke-opacity=".16"/>
+    <text class="type node-title" x="26" y="46" style="fill:var(--secondary)">Audit log</text>
+    <g fill="none" stroke="var(--secondary)" stroke-linecap="round" stroke-opacity=".6" stroke-width="2"><circle cx="30" cy="111" r="3"/><path d="M44 111h108m-108 15h174"/><circle cx="30" cy="160" r="3"/><path d="M44 160h139m-139 15h159"/></g>
+    <text class="type detail" x="25" y="224" style="fill:var(--secondary);fill-opacity:.76">Record database changes</text>
   </g>
   <path d="M752 389h68" class="accent-line" marker-end="url(#arrow)"/>
   <g transform="translate(64 555)">
