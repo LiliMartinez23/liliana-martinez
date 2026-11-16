@@ -1,106 +1,157 @@
 <!doctype html>
 <html lang="en" data-palette="7">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Liliana Martinez, a computer science student in San Antonio building practical web applications and thoughtful database workflows.">
+  <meta name="description"
+    content="Liliana Martinez, a computer science student in San Antonio building practical web applications and thoughtful database workflows.">
   <meta name="theme-color" content="#211f20">
   <title>Liliana Martinez — Web Development &amp; Databases</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css?v=dc1f1789a683">
   <script src="js/site.js" defer></script>
 </head>
+
 <body data-page="projects">
   <a class="skip-link" href="#main">Skip to main content</a>
   <div id="site-header"></div>
 
-  <noscript><nav aria-label="Main navigation"><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="projects.html" aria-current="page">Projects</a> · <a href="blogs.html">Blogs</a></nav></noscript>
+  <noscript>
+    <nav aria-label="Main navigation"><a href="index.html">Home</a> · <a href="about.html">About</a> · <a
+        href="projects.html" aria-current="page">Projects</a> · <a href="blogs.html">Blogs</a></nav>
+  </noscript>
 
   <main id="main" tabindex="-1">
     <section class="section page-intro" aria-labelledby="projects-title">
       <div class="section-inner container">
         <p class="eyebrow">Selected projects / Web · Data · Automation</p>
         <h1 class="display-title" id="projects-title">Practical work.<br>Real problems.</h1>
-        <p class="page-lede">Web applications, database design, and the workflows in between. A closer look at the problems I’ve worked on and the decisions behind the code.</p>
-        <noscript><p>Project summaries are below. Enable JavaScript to open the full case studies.</p></noscript>
+        <p class="page-lede">Web applications, database design, and the workflows in between. A closer look at the
+          problems I’ve worked on and the decisions behind the code.</p>
+        <noscript>
+          <p>Project summaries are below. Enable JavaScript to open the full case studies.</p>
+        </noscript>
       </div>
     </section>
 
     <div class="projects-collection">
-    <section class="section project-row inverse compact-section" id="work-suggestion" aria-labelledby="suggestion-title">
-      <div class="section-inner container project-grid">
-        <figure class="project-figure">
-          <img class="project-cover project-visual" src="img/project-suggestion-visual.svg" alt="Interface illustration of the Web Services team’s internal Suggestion Form and review statuses" width="1200" height="750" fetchpriority="high">
-          <figcaption class="visually-hidden">Interface illustration, not an application screenshot.</figcaption>
-        </figure>
-        <div class="project-copy">
-          <p class="eyebrow">Latest Project</p>
-          <h2 id="suggestion-title">Suggestion Form Generator</h2>
-          <p class="project-contribution">I developed an internal suggestion workflow for our Web Services team’s Web Dev Portal, as part of my work on its Audit and Suggestion Form generators.</p>
-          <ul class="tag-list" aria-label="Technologies"><li>PHP</li><li>MySQL</li><li>HTML</li><li>CSS</li></ul>
-          <button class="text-link" type="button" data-open-project="suggestion" aria-haspopup="dialog" aria-controls="project-suggestion">View case study <span aria-hidden="true">↗</span></button>
+      <section class="section project-row inverse compact-section" id="work-suggestion"
+        aria-labelledby="suggestion-title">
+        <div class="section-inner container project-grid">
+          <figure class="project-figure">
+            <img class="project-cover project-visual" src="img/project-suggestion-visual.svg"
+              alt="Interface illustration of the Web Services team’s internal Suggestion Form and review statuses"
+              width="1200" height="750" fetchpriority="high">
+            <figcaption class="visually-hidden">Interface illustration, not an application screenshot.</figcaption>
+          </figure>
+          <div class="project-copy">
+            <p class="eyebrow">Latest Project</p>
+            <h2 id="suggestion-title">Suggestion Form Generator</h2>
+            <p class="project-contribution">I developed an internal suggestion workflow for our Web Services team’s Web
+              Dev Portal, as part of my work on its Audit and Suggestion Form generators.</p>
+            <ul class="tag-list" aria-label="Technologies">
+              <li>PHP</li>
+              <li>MySQL</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+            <button class="text-link" type="button" data-open-project="suggestion" aria-haspopup="dialog"
+              aria-controls="project-suggestion">View case study <span aria-hidden="true">↗</span></button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section project-row compact-section" id="work-crop" aria-labelledby="crop-title">
-      <div class="section-inner container project-grid">
-        <figure class="project-figure">
-          <img class="project-cover project-visual" src="img/project-crop-visual.svg" alt="Interface illustration of a fixed 1:1 crop, square faculty-photo preview, and export controls" width="1200" height="750" loading="lazy" decoding="async">
-          <figcaption class="visually-hidden">Interface illustration, not an application screenshot.</figcaption>
-        </figure>
-        <div class="project-copy">
-          <p class="eyebrow">Web / Image tools</p>
-          <h2 id="crop-title">Faculty Profile Image Crop Tool</h2>
-          <p class="project-contribution">I noticed inconsistent profile-photo dimensions on HB2504 department pages and proposed a crop tool that lets faculty adjust their photos within a fixed 1:1 ratio.</p>
-          <ul class="tag-list" aria-label="Technologies"><li>JavaScript</li><li>PHP</li><li>Cropper.js</li><li>Bootstrap</li></ul>
-          <button class="text-link" type="button" data-open-project="crop" aria-haspopup="dialog" aria-controls="project-crop">View case study <span aria-hidden="true">↗</span></button>
+      <section class="section project-row compact-section" id="work-crop" aria-labelledby="crop-title">
+        <div class="section-inner container project-grid">
+          <figure class="project-figure">
+            <img class="project-cover project-visual" src="img/project-crop-visual.svg"
+              alt="Interface illustration of a fixed 1:1 crop, square faculty-photo preview, and export controls"
+              width="1200" height="750" loading="lazy" decoding="async">
+            <figcaption class="visually-hidden">Interface illustration, not an application screenshot.</figcaption>
+          </figure>
+          <div class="project-copy">
+            <p class="eyebrow">Web / Image tools</p>
+            <h2 id="crop-title">Faculty Profile Image Crop Tool</h2>
+            <p class="project-contribution">I noticed inconsistent profile-photo dimensions on HB2504 department pages
+              and proposed a crop tool that lets faculty adjust their photos within a fixed 1:1 ratio.</p>
+            <ul class="tag-list" aria-label="Technologies">
+              <li>JavaScript</li>
+              <li>PHP</li>
+              <li>Cropper.js</li>
+              <li>Bootstrap</li>
+            </ul>
+            <button class="text-link" type="button" data-open-project="crop" aria-haspopup="dialog"
+              aria-controls="project-crop">View case study <span aria-hidden="true">↗</span></button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section project-row inverse compact-section" id="work-weather" aria-labelledby="weather-title">
-      <div class="section-inner container project-grid">
-        <figure class="project-figure">
-          <img class="project-cover project-visual" src="img/project-weather-visual.svg" alt="Workflow illustration of weather data moving through staging, MySQL processing, and archiving" width="1200" height="750" loading="lazy" decoding="async">
-          <figcaption class="visually-hidden">Workflow illustration based on the project case study.</figcaption>
-        </figure>
-        <div class="project-copy">
-          <p class="eyebrow">Data / Automation</p>
-          <h2 id="weather-title">Weather Data Pipeline</h2>
-          <p class="project-contribution">I automated recurring MySQL imports with staged processing, logs, file archiving, and cron.</p>
-          <ul class="tag-list" aria-label="Technologies"><li>Bash</li><li>MySQL</li><li>Linux / WSL</li><li>cron</li></ul>
-          <button class="text-link" type="button" data-open-project="weather" aria-haspopup="dialog" aria-controls="project-weather">View case study <span aria-hidden="true">↗</span></button>
+      <section class="section project-row inverse compact-section" id="work-weather" aria-labelledby="weather-title">
+        <div class="section-inner container project-grid">
+          <figure class="project-figure">
+            <img class="project-cover project-visual" src="img/project-weather-visual.svg"
+              alt="Workflow illustration of weather data moving through staging, MySQL processing, and archiving"
+              width="1200" height="750" loading="lazy" decoding="async">
+            <figcaption class="visually-hidden">Workflow illustration based on the project case study.</figcaption>
+          </figure>
+          <div class="project-copy">
+            <p class="eyebrow">Data / Automation</p>
+            <h2 id="weather-title">Weather Data Pipeline</h2>
+            <p class="project-contribution">I automated recurring MySQL imports with staged processing, logs, file
+              archiving, and cron.</p>
+            <ul class="tag-list" aria-label="Technologies">
+              <li>Bash</li>
+              <li>MySQL</li>
+              <li>Linux / WSL</li>
+              <li>cron</li>
+            </ul>
+            <button class="text-link" type="button" data-open-project="weather" aria-haspopup="dialog"
+              aria-controls="project-weather">View case study <span aria-hidden="true">↗</span></button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section project-row compact-section" id="work-audit" aria-labelledby="audit-title">
-      <div class="section-inner container project-grid">
-        <figure class="project-figure">
-          <img class="project-cover project-visual" src="img/project-audit-visual.svg" alt="Workflow illustration connecting voting records, validation constraints and triggers, and an audit trail" width="1200" height="750" loading="lazy" decoding="async">
-          <figcaption class="visually-hidden">Workflow illustration based on the project case study.</figcaption>
-        </figure>
-        <div class="project-copy">
-          <p class="eyebrow">Data / Integrity</p>
-          <h2 id="audit-title">Voter Data Integrity &amp; Audit System</h2>
-          <p class="project-contribution">I designed relational tables, constraints, and MySQL triggers to validate voting records and track changes.</p>
-          <ul class="tag-list" aria-label="Technologies"><li>SQL</li><li>MySQL</li><li>Constraints</li><li>Triggers</li></ul>
-          <button class="text-link" type="button" data-open-project="audit" aria-haspopup="dialog" aria-controls="project-audit">View case study <span aria-hidden="true">↗</span></button>
+      <section class="section project-row compact-section" id="work-audit" aria-labelledby="audit-title">
+        <div class="section-inner container project-grid">
+          <figure class="project-figure">
+            <img class="project-cover project-visual" src="img/project-audit-visual.svg"
+              alt="Workflow illustration connecting voting records, validation constraints and triggers, and an audit trail"
+              width="1200" height="750" loading="lazy" decoding="async">
+            <figcaption class="visually-hidden">Workflow illustration based on the project case study.</figcaption>
+          </figure>
+          <div class="project-copy">
+            <p class="eyebrow">Data / Integrity</p>
+            <h2 id="audit-title">Voter Data Integrity &amp; Audit System</h2>
+            <p class="project-contribution">I designed relational tables, constraints, and MySQL triggers to validate
+              voting records and track changes.</p>
+            <ul class="tag-list" aria-label="Technologies">
+              <li>SQL</li>
+              <li>MySQL</li>
+              <li>Constraints</li>
+              <li>Triggers</li>
+            </ul>
+            <button class="text-link" type="button" data-open-project="audit" aria-haspopup="dialog"
+              aria-controls="project-audit">View case study <span aria-hidden="true">↗</span></button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
     </div>
 
     <section class="section inverse contact-section compact-section" aria-labelledby="projects-contact-title">
       <div class="section-inner container">
-        <div><p class="eyebrow">Keep the conversation going</p>
-        <h2 id="projects-contact-title">Let’s connect.</h2>
-        <p class="page-lede">I’m happy to share more about my work and what I’m learning.</p></div>
+        <div>
+          <p class="eyebrow">Keep the conversation going</p>
+          <h2 id="projects-contact-title">Let’s connect.</h2>
+          <p class="page-lede">I’m happy to share more about my work and what I’m learning.</p>
+        </div>
         <a class="button" href="mailto:lilianafinona3@gmail.com">Email me <span aria-hidden="true">↗</span></a>
       </div>
     </section>
@@ -109,23 +160,40 @@
       <div class="dialog-body">
         <div class="dialog-header">
           <p class="eyebrow">Case study / Web Services</p>
-          <button class="dialog-close" type="button" data-close-dialog autofocus>Close <span aria-hidden="true">×</span></button>
+          <button class="dialog-close" type="button" data-close-dialog autofocus>Close <span
+              aria-hidden="true">×</span></button>
         </div>
         <h2 class="dialog-heading" id="suggestion-dialog-title">Suggestion Form Generator</h2>
         <section class="dialog-section" aria-labelledby="suggestion-problem">
           <h3 id="suggestion-problem">The problem</h3>
-          <p>Our Web Services team uses the Web Dev Portal internally to keep links, documents, website audit reports, and other resources together. We needed a way to collect suggestions from teammates about anything that should be changed or updated within the team.</p>
+          <p>Our Web Services team uses the Web Dev Portal internally to keep links, documents, website audit reports,
+            and other resources together. We needed a way to collect suggestions from teammates about anything that
+            should be changed or updated within the team.</p>
         </section>
         <section class="dialog-section dialog-contribution" aria-labelledby="suggestion-contribution">
           <h3 id="suggestion-contribution">My contribution</h3>
-          <p>The portal’s main developer brought me into the project to develop two form generators: the Audit Form, for audit reports on the websites our team manages, and the Suggestion Form, for ideas about internal changes and updates.</p>
-          <p>For the Suggestion Form, I worked on the relational schema, input validation, and submission workflow. Records connect suggestions with users and review statuses, with generated IDs and timestamps. Create, read, update, and delete operations support ongoing record management.</p>
+          <p>The portal’s main developer brought me into the project to develop two form generators: the Audit Form, for
+            audit reports on the websites our team manages, and the Suggestion Form, for ideas about internal changes
+            and updates.</p>
+          <p>For the Suggestion Form, I worked on the relational schema, input validation, and submission workflow.
+            Records connect suggestions with users and review statuses, with generated IDs and timestamps. Create, read,
+            update, and delete operations support ongoing record management.</p>
         </section>
         <section class="dialog-section dialog-workflow" aria-labelledby="suggestion-workflow">
           <h3 id="suggestion-workflow">From submission to review</h3>
-          <ol class="workflow"><li><strong>Collect</strong><span>A teammate submits an internal suggestion through a PHP form.</span></li><li><strong>Store</strong><span>MySQL keeps the validated suggestion and its user association.</span></li><li><strong>Review</strong><span>The Web Services team reviews suggestions and updates their statuses.</span></li></ol>
+          <ol class="workflow">
+            <li><strong>Collect</strong><span>A teammate submits an internal suggestion through a PHP form.</span></li>
+            <li><strong>Store</strong><span>MySQL keeps the validated suggestion and its user association.</span></li>
+            <li><strong>Review</strong><span>The Web Services team reviews suggestions and updates their
+                statuses.</span></li>
+          </ol>
         </section>
-        <ul class="tag-list" aria-label="Technologies"><li>PHP</li><li>MySQL</li><li>HTML</li><li>CSS</li></ul>
+        <ul class="tag-list" aria-label="Technologies">
+          <li>PHP</li>
+          <li>MySQL</li>
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
       </div>
     </dialog>
 
@@ -133,23 +201,40 @@
       <div class="dialog-body">
         <div class="dialog-header">
           <p class="eyebrow">Case study / Web Services</p>
-          <button class="dialog-close" type="button" data-close-dialog autofocus>Close <span aria-hidden="true">×</span></button>
+          <button class="dialog-close" type="button" data-close-dialog autofocus>Close <span
+              aria-hidden="true">×</span></button>
         </div>
         <h2 class="dialog-heading" id="crop-dialog-title">Faculty Profile Image Crop Tool</h2>
         <section class="dialog-section" aria-labelledby="crop-problem">
           <h3 id="crop-problem">The problem</h3>
-          <p>HB2504 houses faculty and staff profiles for the university, including department pages that list those people. I noticed that profile images had inconsistent dimensions, making the department listings look uneven.</p>
+          <p>HB2504 houses faculty and staff profiles for the university, including department pages that list those
+            people. I noticed that profile images had inconsistent dimensions, making the department listings look
+            uneven.</p>
         </section>
         <section class="dialog-section dialog-contribution" aria-labelledby="crop-contribution">
           <h3 id="crop-contribution">My contribution</h3>
-          <p>I raised the issue and suggested a crop tool that would let faculty adjust their photos while keeping a fixed 1:1 aspect ratio. That way, profile images on department pages would be uniform without taking away faculty control over how their photos are framed.</p>
-          <p>I built the cropping workflow with Cropper.js and Bootstrap, added client-side validation, and converted the square crops into upload-ready JPEG files.</p>
+          <p>I raised the issue and suggested a crop tool that would let faculty adjust their photos while keeping a
+            fixed 1:1 aspect ratio. That way, profile images on department pages would be uniform without taking away
+            faculty control over how their photos are framed.</p>
+          <p>I built the cropping workflow with Cropper.js and Bootstrap, added client-side validation, and converted
+            the square crops into upload-ready JPEG files.</p>
         </section>
         <section class="dialog-section dialog-workflow" aria-labelledby="crop-workflow">
           <h3 id="crop-workflow">From original to upload</h3>
-          <ol class="workflow"><li><strong>Select</strong><span>Choose a faculty photo and validate the input.</span></li><li><strong>Adjust</strong><span>Reposition the photo within a fixed, square 1:1 crop.</span></li><li><strong>Export</strong><span>Export a square JPEG ready for the HB2504 profile.</span></li></ol>
+          <ol class="workflow">
+            <li><strong>Select</strong><span>Choose a faculty photo and validate the input.</span></li>
+            <li><strong>Adjust</strong><span>Reposition the photo within a fixed, square 1:1 crop.</span></li>
+            <li><strong>Export</strong><span>Export a square JPEG ready for the HB2504 profile.</span></li>
+          </ol>
         </section>
-        <ul class="tag-list" aria-label="Technologies"><li>JavaScript</li><li>PHP</li><li>Cropper.js</li><li>Bootstrap</li><li>HTML</li><li>CSS</li></ul>
+        <ul class="tag-list" aria-label="Technologies">
+          <li>JavaScript</li>
+          <li>PHP</li>
+          <li>Cropper.js</li>
+          <li>Bootstrap</li>
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
       </div>
     </dialog>
 
@@ -157,7 +242,8 @@
       <div class="dialog-body">
         <div class="dialog-header">
           <p class="eyebrow">Case study / Data automation</p>
-          <button class="dialog-close" type="button" data-close-dialog autofocus>Close <span aria-hidden="true">×</span></button>
+          <button class="dialog-close" type="button" data-close-dialog autofocus>Close <span
+              aria-hidden="true">×</span></button>
         </div>
         <h2 class="dialog-heading" id="weather-dialog-title">Weather Data Pipeline</h2>
         <section class="dialog-section" aria-labelledby="weather-problem">
@@ -166,13 +252,24 @@
         </section>
         <section class="dialog-section dialog-contribution" aria-labelledby="weather-contribution">
           <h3 id="weather-contribution">My contribution</h3>
-          <p>I built staged imports, processing logs, and input-file archiving, then scheduled recurring runs with cron. I also diagnosed database connectivity, permission, file-loading, and duplicate-record issues.</p>
+          <p>I built staged imports, processing logs, and input-file archiving, then scheduled recurring runs with cron.
+            I also diagnosed database connectivity, permission, file-loading, and duplicate-record issues.</p>
         </section>
         <section class="dialog-section dialog-workflow" aria-labelledby="weather-workflow">
           <h3 id="weather-workflow">From file to database</h3>
-          <ol class="workflow"><li><strong>Stage</strong><span>A Bash script loads incoming data into a staging table.</span></li><li><strong>Process</strong><span>Move records to the destination and log the activity.</span></li><li><strong>Archive</strong><span>Keep the processed input file for later reference.</span></li></ol>
+          <ol class="workflow">
+            <li><strong>Stage</strong><span>A Bash script loads incoming data into a staging table.</span></li>
+            <li><strong>Process</strong><span>Move records to the destination and log the activity.</span></li>
+            <li><strong>Archive</strong><span>Keep the processed input file for later reference.</span></li>
+          </ol>
         </section>
-        <ul class="tag-list" aria-label="Technologies"><li>Bash</li><li>MySQL</li><li>SQL</li><li>Linux / WSL</li><li>cron</li></ul>
+        <ul class="tag-list" aria-label="Technologies">
+          <li>Bash</li>
+          <li>MySQL</li>
+          <li>SQL</li>
+          <li>Linux / WSL</li>
+          <li>cron</li>
+        </ul>
       </div>
     </dialog>
 
@@ -180,7 +277,8 @@
       <div class="dialog-body">
         <div class="dialog-header">
           <p class="eyebrow">Case study / Relational database design</p>
-          <button class="dialog-close" type="button" data-close-dialog autofocus>Close <span aria-hidden="true">×</span></button>
+          <button class="dialog-close" type="button" data-close-dialog autofocus>Close <span
+              aria-hidden="true">×</span></button>
         </div>
         <h2 class="dialog-heading" id="audit-dialog-title">Voter Data Integrity &amp; Audit System</h2>
         <section class="dialog-section" aria-labelledby="audit-problem">
@@ -189,16 +287,27 @@
         </section>
         <section class="dialog-section dialog-contribution" aria-labelledby="audit-contribution">
           <h3 id="audit-contribution">My contribution</h3>
-          <p>I designed relational tables with primary and foreign keys, check constraints, and validation rules. I created MySQL triggers to enforce voting rules and record changes for auditing and troubleshooting.</p>
+          <p>I designed relational tables with primary and foreign keys, check constraints, and validation rules. I
+            created MySQL triggers to enforce voting rules and record changes for auditing and troubleshooting.</p>
         </section>
         <section class="dialog-section dialog-workflow" aria-labelledby="audit-workflow">
           <h3 id="audit-workflow">From record to audit trail</h3>
-          <ol class="workflow"><li><strong>Validate</strong><span>Constraints check incoming records.</span></li><li><strong>Enforce</strong><span>Triggers apply the voting-data rules.</span></li><li><strong>Record</strong><span>Capture changes in an audit record for review.</span></li></ol>
+          <ol class="workflow">
+            <li><strong>Validate</strong><span>Constraints check incoming records.</span></li>
+            <li><strong>Enforce</strong><span>Triggers apply the voting-data rules.</span></li>
+            <li><strong>Record</strong><span>Capture changes in an audit record for review.</span></li>
+          </ol>
         </section>
-        <ul class="tag-list" aria-label="Technologies"><li>SQL</li><li>MySQL</li><li>Constraints</li><li>Triggers</li></ul>
+        <ul class="tag-list" aria-label="Technologies">
+          <li>SQL</li>
+          <li>MySQL</li>
+          <li>Constraints</li>
+          <li>Triggers</li>
+        </ul>
       </div>
     </dialog>
   </main>
   <div id="site-footer"></div>
 </body>
+
 </html>
