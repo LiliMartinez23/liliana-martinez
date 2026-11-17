@@ -1,7 +1,8 @@
 /* Personal portfolio with side navigation and a few generous panels. */
 :root {
   color-scheme: dark;
-  --primary: #211f20;
-  --secondary: #e3dac7;
-  --accent: #c56d3f;
+  --primary: #060000;
+  --secondary: #dedbd1;
+  --accent-1: #135d14;
+  --accent-2: #ad8454;
 }
