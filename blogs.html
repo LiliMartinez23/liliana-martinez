@@ -1,41 +1,31 @@
 <!doctype html>
-<html lang="en" data-palette="7">
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-    content="Liliana Martinez, a computer science student in San Antonio building practical web applications and thoughtful database workflows.">
-  <meta name="theme-color" content="#211f20">
-  <title>Liliana Martinez — Web Development &amp; Databases</title>
+  <meta name="theme-color" content="#f2f2ed">
+  <meta name="description" content="Liliana Martinez, a computer science student and web development student worker at Texas A&M University–San Antonio.">
+  <title>Blog | Liliana Martinez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
     integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=dc1f1789a683">
-  <script src="js/site.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css?v=20261117-sliding">
+  <script src="homepage.js?v=20261117" defer></script>
 </head>
-
-<body data-page="blogs"><a class="skip-link" href="#main">Skip to main content</a>
-  <div id="site-header"></div>
-  <noscript>
-    <nav aria-label="Main navigation"><a href="index.html">Home</a> · <a href="about.html">About</a> · <a
-        href="projects.html">Projects</a> · <a href="blogs.html" aria-current="page">Blogs</a></nav>
-  </noscript>
-  <main id="main" tabindex="-1">
-    <section class="section empty-blog" aria-labelledby="blogs-title">
-      <div class="container">
-        <div class="section-inner">
-          <h1 class="display-title" id="blogs-title">Blog</h1>
-          <div class="empty-rule" aria-hidden="true"></div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <div id="site-footer"></div>
-</body>
-
-</html>
+<body><a class="skip-link" href="#main">Skip to main content</a><header class="site-header container light-header">
+    <a class="brand" href="index.html#home" aria-label="Liliana Martinez home">lm</a>
+    <nav class="main-nav" aria-label="Main navigation"><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="blogs.html">Blog</a><a href="resources.html">Resources</a></nav>
+  </header><main id="main" class="content-page"><div class="container"><h1>Blog</h1><p>There are no blog posts to display yet.</p></div></main><footer class="site-footer" id="connect"><div class="container">
+    <div class="footer-main"><h2>Let’s Connect</h2><p>A question, an idea, or just a hello. My inbox is open.</p>
+      <nav class="social-links" aria-label="Social links in footer">
+        <a class="social-link" href="https://www.linkedin.com/in/liliana-martinez-/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+        <a class="social-link" href="https://github.com/LiliMartinez23" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        <button class="social-link" type="button" aria-label="Discord: tldr.afk" title="Discord: tldr.afk" aria-haspopup="dialog" aria-controls="discord-dialog" data-open-discord><i class="fa-brands fa-discord" aria-hidden="true"></i></button>
+        <a class="social-link" href="mailto:lilianafinona3@gmail.com" aria-label="Gmail" title="Gmail"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+      </nav>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Liliana Martinez</span><span>San Antonio, Texas</span></div>
+  </div></footer><dialog class="project-dialog discord-dialog" id="discord-dialog" aria-labelledby="discord-title"><div class="dialog-body"><div class="dialog-header"><h2 id="discord-title">Discord</h2><button class="dialog-close" type="button" data-close-dialog autofocus>Close</button></div><p class="discord-instruction">Add me on Discord using my username.</p><label class="visually-hidden" for="discord-username">Discord username</label><input class="discord-username" id="discord-username" type="text" value="tldr.afk" readonly spellcheck="false"><div class="discord-actions"><button class="button" type="button" data-copy-discord>Copy username</button></div><p class="discord-status" role="status" aria-live="polite"></p></div></dialog></body></html>
