@@ -15,17 +15,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=dc1f1789a683">
-  <script src="js/site.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css?v=20261117-responsive">
+  <script src="homepage.js?v=20261117-responsive" defer></script>
 </head>
 
 <body data-page="about">
   <a class="skip-link" href="#main">Skip to main content</a>
-  <div id="site-header"></div>
-  <noscript>
-    <nav aria-label="Main navigation"><a href="index.html">Home</a> · <a href="about.html" aria-current="page">About</a>
-      · <a href="projects.html">Projects</a> · <a href="blogs.html">Blogs</a></nav>
-  </noscript>
+  <header class="site-header container standalone-header">
+    <a class="brand" href="index.html#home" aria-label="Liliana Martinez home">lm</a>
+    <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-navigation" hidden>
+      <span class="menu-icon" aria-hidden="true"></span>
+    </button>
+    <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="blogs.html">Blogs</a>
+    </nav>
+  </header>
   <main id="main" tabindex="-1">
     <section class="section hero-about" aria-labelledby="about-title">
       <div class="section-inner container story-grid">
@@ -38,7 +45,7 @@
             applications.</p><a class="button" href="Resume-Liliana-Martinez.pdf">View my resume <span
               aria-hidden="true">↗</span></a>
         </div>
-        <figure class="portrait-figure"><img class="portrait" src="img/liliana-martinez-headshot.jpg"
+        <figure class="portrait-figure"><img class="portrait" src="img/liliana-martinez-headshot.webp"
             alt="Liliana Martinez" width="399" height="400" fetchpriority="high">
           <figcaption>In San Antonio, finding my own way.</figcaption>
         </figure>

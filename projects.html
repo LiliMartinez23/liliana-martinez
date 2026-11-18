@@ -15,18 +15,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=dc1f1789a683">
-  <script src="js/site.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css?v=20261117-responsive">
+  <script src="homepage.js?v=20261117-responsive" defer></script>
 </head>
 
 <body data-page="projects">
   <a class="skip-link" href="#main">Skip to main content</a>
-  <div id="site-header"></div>
-
-  <noscript>
-    <nav aria-label="Main navigation"><a href="index.html">Home</a> · <a href="about.html">About</a> · <a
-        href="projects.html" aria-current="page">Projects</a> · <a href="blogs.html">Blogs</a></nav>
-  </noscript>
+  <header class="site-header container standalone-header">
+    <a class="brand" href="index.html#home" aria-label="Liliana Martinez home">lm</a>
+    <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-navigation" hidden>
+      <span class="menu-icon" aria-hidden="true"></span>
+    </button>
+    <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="blogs.html">Blogs</a>
+    </nav>
+  </header>
 
   <main id="main" tabindex="-1">
     <section class="section page-intro" aria-labelledby="projects-title">
@@ -46,7 +52,7 @@
         aria-labelledby="suggestion-title">
         <div class="section-inner container project-grid">
           <figure class="project-figure">
-            <img class="project-cover project-visual" src="img/project-suggestion-visual.svg"
+            <img class="project-cover project-visual" src="img/project-suggestion-visual.webp"
               alt="Interface illustration of the Web Services team’s internal Suggestion Form and review statuses"
               width="1200" height="750" fetchpriority="high">
             <figcaption class="visually-hidden">Interface illustration, not an application screenshot.</figcaption>
@@ -71,7 +77,7 @@
       <section class="section project-row compact-section" id="work-crop" aria-labelledby="crop-title">
         <div class="section-inner container project-grid">
           <figure class="project-figure">
-            <img class="project-cover project-visual" src="img/project-crop-visual.svg"
+            <img class="project-cover project-visual" src="img/project-crop-visual.webp"
               alt="Interface illustration of a fixed 1:1 crop, square faculty-photo preview, and export controls"
               width="1200" height="750" loading="lazy" decoding="async">
             <figcaption class="visually-hidden">Interface illustration, not an application screenshot.</figcaption>
@@ -96,7 +102,7 @@
       <section class="section project-row inverse compact-section" id="work-weather" aria-labelledby="weather-title">
         <div class="section-inner container project-grid">
           <figure class="project-figure">
-            <img class="project-cover project-visual" src="img/project-weather-visual.svg"
+            <img class="project-cover project-visual" src="img/project-weather-visual.webp"
               alt="Workflow illustration of weather data moving through staging, MySQL processing, and archiving"
               width="1200" height="750" loading="lazy" decoding="async">
             <figcaption class="visually-hidden">Workflow illustration based on the project case study.</figcaption>
@@ -121,7 +127,7 @@
       <section class="section project-row compact-section" id="work-audit" aria-labelledby="audit-title">
         <div class="section-inner container project-grid">
           <figure class="project-figure">
-            <img class="project-cover project-visual" src="img/project-audit-visual.svg"
+            <img class="project-cover project-visual" src="img/project-audit-visual.webp"
               alt="Workflow illustration connecting voting records, validation constraints and triggers, and an audit trail"
               width="1200" height="750" loading="lazy" decoding="async">
             <figcaption class="visually-hidden">Workflow illustration based on the project case study.</figcaption>
