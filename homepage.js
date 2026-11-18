@@ -1,5 +1,29 @@
 (() => {
   'use strict';
+
+  const menuToggle = document.querySelector('.menu-toggle');
+  if (menuToggle) {
+    const header = menuToggle.closest('.site-header');
+    const isMenuOpen = () => menuToggle.getAttribute('aria-expanded') === 'true';
+    const setMenuOpen = open => menuToggle.setAttribute('aria-expanded', String(open));
+
+    menuToggle.addEventListener('click', () => setMenuOpen(!isMenuOpen()));
+    document.addEventListener('click', event => {
+      if (isMenuOpen() && (!header.contains(event.target) || event.target.closest('a'))) setMenuOpen(false);
+    });
+    header.addEventListener('focusout', event => {
+      if (isMenuOpen() && !header.contains(event.relatedTarget)) setMenuOpen(false);
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key !== 'Escape' || !isMenuOpen()) return;
+      event.preventDefault();
+      setMenuOpen(false);
+      menuToggle.focus();
+    });
+    window.matchMedia('(max-width: 760px)').addEventListener('change', () => setMenuOpen(false));
+    menuToggle.hidden = false;
+  }
+
   let opener = null;
   document.addEventListener('click', async event => {
     const trigger = event.target.closest('[data-open-project]');

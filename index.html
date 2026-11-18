@@ -12,19 +12,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
     integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="css/styles.css?v=20261117-sliding">
-  <script src="homepage.js?v=20261117" defer></script>
+  <link rel="stylesheet" href="css/styles.css?v=20261117-responsive-gallery">
+  <script src="homepage.js?v=20261117-responsive" defer></script>
   <script src="talks-carousel.js?v=20261117" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header container">
     <a class="brand" href="#home" aria-label="Liliana Martinez home">lm</a>
-    <nav class="main-nav" aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="blogs.html">Blog</a><a href="resources.html">Resources</a></nav>
+    <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-navigation" hidden><span class="menu-icon" aria-hidden="true"></span></button>
+    <nav class="main-nav" id="main-navigation" aria-label="Main navigation"><a href="#work">Work</a><a href="#projects">Projects</a><a href="blogs.html">Blog</a><a href="resources.html">Resources</a></nav>
   </header>
 <main id="main">
   <section class="landing-hero" id="home" aria-labelledby="home-title"><div class="container">
-    <div class="hero-person" id="about"><img src="img/liliana-martinez-headshot.jpg" alt="Liliana Martinez" width="399" height="400" fetchpriority="high"></div>
+    <div class="hero-person" id="about"><img src="img/liliana-martinez-headshot.webp" alt="Liliana Martinez" width="399" height="400" fetchpriority="high"></div>
     <h1 id="home-title">Liliana Martinez</h1>
     <p class="hero-description">I’m a computer science student at Texas A&amp;M University–San Antonio and a student worker on the university’s web development team.</p>
     <nav class="social-links" aria-label="Connect with Liliana">
@@ -35,16 +36,22 @@
         </nav>
   </div></section>
   <section class="section light-section" id="work" aria-labelledby="experience-title"><div class="container">
-    <div class="section-intro"><div><p class="section-kicker">Experience</p><h2 id="experience-title">Web Development Experience</h2></div><p>Campus work, coursework, and independent projects.</p></div>
-    <div class="experience-bento">
-      <article class="experience-feature"><p class="experience-meta">Texas A&amp;M University–San Antonio · 2022–2026</p><h3>Web Services<br>Student Worker</h3><p>I develop internal web applications, build database-backed forms, and troubleshoot workflows for the university’s Web Services team.</p><div class="project-names" aria-label="Projects"><span>Suggestion Form Generator</span><span>Faculty Profile Image Crop Tool</span></div></article>
-      <article class="experience-small"><h3>Class projects</h3><p>Web development projects completed through my computer science coursework.</p></article>
-      <article class="experience-small side-quests"><h3>Side quests</h3><p>Creating websites for a local accounting firm and a martial arts gym.</p></article>
+    <div class="section-intro"><div><p class="section-kicker">Experience</p><h2 id="experience-title">Web Development Experience</h2></div></div>
+    <div class="experience-bento" id="projects">
+      <article class="experience-feature"><p class="experience-meta">Texas A&amp;M University–San Antonio · 2022–2026</p><h3>Web Development Team</h3><p>Developed interactive web applications and tools for the university. As well as internal applications for the web development team using PHP, JavaScript, MySQL, HTML, CSS, and more.</p><a class="button experience-resume" href="Resume-Liliana-Martinez.pdf" target="_blank" rel="noopener">View my resume <span aria-hidden="true">↗</span></a></article>
+      <article class="experience-small latest-project"><span class="project-ribbon">Latest project</span><h3>Suggestion Form</h3><p>An internal suggestion workflow for our Web Services team’s Web Dev Portal, with input validation and database-backed submissions.</p></article>
+      <article class="experience-small crop-project"><h3>Image Crop Tool</h3><p>A tool that lets faculty crop their profile photos to a consistent 1:1 ratio for university department pages.</p></article>
     </div>
   </div></section>
   <section class="section awards-section" id="accomplishments" aria-labelledby="accomplishments-title"><div class="container awards-grid">
-    <figure class="awards-photo"><img src="img/jaguar-awards.JPG" alt="ACM student chapter members holding awards at JaguarAwards" width="2160" height="1215" loading="eager" decoding="async"><figcaption>JaguarAwards · ACM TAMUSA</figcaption></figure>
-    <div class="awards-copy"><p class="section-kicker">Community &amp; recognition</p><h2 id="accomplishments-title">Accomplishments</h2><p>Recognition with our ACM student chapter at JaguarAwards.</p><article class="award"><h3>Best Fundraiser of the Year</h3><p>At our booth’s human slot machine, participants tried their luck for a chance to win a free item from the menu.</p></article><article class="award"><h3>Student Organization for Community Service</h3><p>Volunteered and hosted talks at K–12 schools across San Antonio and Somerset, Texas.</p></article></div>
+    <div class="awards-copy"><p class="section-kicker">Community &amp; recognition</p><h2 id="accomplishments-title">Accomplishments</h2><article class="award"><h3>Best Fundraiser of the Year</h3><p>At our booth’s human slot machine, participants tried their luck for a chance to win a free item from the menu.</p></article><article class="award"><h3>Student Organization for Community Service</h3><p>Volunteered and hosted talks at K–12 schools across San Antonio and ZECLA.</p></article></div>
+    <figure class="awards-photo">
+      <div class="awards-bento">
+        <img class="awards-group-photo" src="img/jaguar-awards.webp" alt="ACM student chapter members holding awards at JaguarAwards" width="2160" height="1215" loading="lazy" decoding="async">
+        <img class="awards-trophies-photo" src="img/acm-jag-awards.webp?v=20261117-closeup" alt="ACM’s 2026 JaguarAwards for Student Organization Community Service and Fundraiser of the Year" width="2160" height="2160" loading="lazy" decoding="async">
+        <img class="awards-program-photo" src="img/acm-jag-awards-card.webp?v=20261117-quality" alt="Program for the 2026 Jaguar Awards presented by the Cisneros Institute for Emerging Leaders" width="2160" height="3840" loading="lazy" decoding="async">
+      </div>
+    </figure>
   </div></section>
   <section class="section light-section" id="talks" aria-labelledby="talks-title"><div class="container">
     <div class="section-intro"><div><p class="section-kicker">Sharing what I’m learning</p><h2 id="talks-title">Talks &amp; Presentations</h2></div></div>
@@ -52,16 +59,16 @@
       <div class="talk-slides" id="talk-slides" aria-live="off">
       <div class="talk-track" data-talk-track>
         <article class="talk-card" role="group" aria-roledescription="slide" aria-label="1 of 3: ZECLA Ladies Luncheon" data-talk-slide>
-          <img class="talk-image luncheon-image" src="img/zecla-ladies-luncheon-2.jpg" alt="Group photo at the ZECLA Ladies Luncheon" width="2048" height="1536" loading="eager" decoding="async">
-          <div class="talk-body"><p class="talk-label">Alumna panel · Somerset, Texas</p><h3>ZECLA Ladies Luncheon</h3></div>
+          <img class="talk-image luncheon-image" src="img/zecla-ladies-luncheon-2.webp" alt="Group photo at the ZECLA Ladies Luncheon" width="2048" height="1536" loading="eager" decoding="async">
+          <div class="talk-body"><p class="talk-label">Alumna panel · ZECLA</p><h3>ZECLA Ladies Luncheon</h3></div>
         </article>
-        <article class="talk-card" role="group" aria-roledescription="slide" aria-label="2 of 3: Web Development Basics" data-talk-slide hidden>
-          <img class="talk-image web-workshop-image" src="img/acm-web-dev-workshop.jpg" alt="Liliana presenting web development basics to students in a classroom" width="2880" height="2160" loading="eager" decoding="async">
-          <div class="talk-body"><p class="talk-label">Workshop · ACM TAMUSA</p><h3>Web Development Basics</h3></div>
+        <article class="talk-card" role="group" aria-roledescription="slide" aria-label="2 of 3: Introduction to Web Development" data-talk-slide hidden>
+          <img class="talk-image web-workshop-image" src="img/acm-web-dev-workshop.webp" alt="Liliana presenting an introduction to web development to students in a classroom" width="2880" height="2160" loading="eager" decoding="async">
+          <div class="talk-body"><p class="talk-label">Workshop · ACM TAMUSA</p><h3>Introduction to Web Development</h3></div>
         </article>
-        <article class="talk-card" role="group" aria-roledescription="slide" aria-label="3 of 3: Git Basics" data-talk-slide hidden>
+        <article class="talk-card" role="group" aria-roledescription="slide" aria-label="3 of 3: Introduction to Git" data-talk-slide hidden>
           <img class="talk-image git-image" src="img/acm-jaghacks-git-workshop.webp" alt="Liliana and a fellow ACM officer presenting a Git workshop at JagHacks" width="1500" height="1000" loading="eager" decoding="async">
-          <div class="talk-body"><p class="talk-label">Workshop · JagHacks</p><h3>Git Basics</h3></div>
+          <div class="talk-body"><p class="talk-label">Workshop · JagHacks</p><h3>Introduction to Git</h3></div>
         </article>
       </div>
       </div>
@@ -69,8 +76,8 @@
         <button class="carousel-button" type="button" aria-label="Previous presentation" title="Previous presentation" aria-controls="talk-slides" data-talk-previous><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
         <div class="carousel-pagination" aria-label="Choose a presentation">
           <button class="carousel-dot" type="button" aria-label="Show ZECLA Ladies Luncheon" aria-current="true" aria-controls="talk-slides" data-talk-go="0"></button>
-          <button class="carousel-dot" type="button" aria-label="Show Web Development Basics" aria-controls="talk-slides" data-talk-go="1"></button>
-          <button class="carousel-dot" type="button" aria-label="Show Git Basics" aria-controls="talk-slides" data-talk-go="2"></button>
+          <button class="carousel-dot" type="button" aria-label="Show Introduction to Web Development" aria-controls="talk-slides" data-talk-go="1"></button>
+          <button class="carousel-dot" type="button" aria-label="Show Introduction to Git" aria-controls="talk-slides" data-talk-go="2"></button>
         </div>
         <button class="carousel-button" type="button" aria-label="Next presentation" title="Next presentation" aria-controls="talk-slides" data-talk-next><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
       </div>
