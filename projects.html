@@ -7,29 +7,138 @@
   <meta name="theme-color" content="#111213">
   <meta name="description"
     content="Liliana Martinez, a computer science student and web development student worker at Texas A&M University-San Antonio.">
-  <title>Liliana Martinez — Web Development</title>
+  <title>Projects — Liliana Martinez</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
     integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="css/styles.css?v=20261117-responsive-gallery">
+  <link rel="stylesheet" href="css/styles.css?v=20261118-project-icons">
   <script src="homepage.js?v=20261117-responsive" defer></script>
   <script src="talks-carousel.js?v=20261117" defer></script>
 </head>
 
-<body>
+<body class="projects-page">
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header container">
     <a class="brand" href="index.html" aria-label="Liliana Martinez home">lm</a>
     <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-navigation"
       hidden><span class="menu-icon" aria-hidden="true"></span></button>
     <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
-      <a href="projects.html">Projects</a>
+      <a href="projects.html" aria-current="page">Projects</a>
       <a href="blogs.html">Blog</a>
       <a href="resources.html">Resources</a>
     </nav>
   </header>
+
+  <main id="main">
+    <section class="landing-hero projects-hero" aria-labelledby="projects-title">
+      <div class="container">
+        <h1 id="projects-title">Projects</h1>
+        <p class="hero-description">Data pipelines, web applications, and tools for everyday workflows.</p>
+      </div>
+    </section>
+
+    <div class="light-section projects-gallery">
+      <div class="container project-card-grid">
+        <article class="project-card">
+          <div class="project-card-art">
+            <img src="img/projects/weather-pipeline.webp" alt="" width="72" height="56" decoding="async">
+          </div>
+          <div class="project-card-body">
+            <h2>Weather data pipeline</h2>
+            <p>A pipeline for collecting and processing weather data.</p>
+            <button class="project-card-action" type="button" disabled
+              aria-label="Weather data pipeline link unavailable" title="Project link unavailable">
+              <span class="project-card-action-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-card-art">
+            <img src="img/projects/clearpath-ai.webp" alt="" width="72" height="56" decoding="async">
+          </div>
+          <div class="project-card-body">
+            <h2>ClearPathAI</h2>
+            <p>An AI-powered study summarizer designed for ADHD-friendly learning.</p>
+            <a class="project-card-action" href="https://github.com/GabrielKV4/AI-Academia"
+              target="_blank" rel="noopener" aria-label="Open ClearPathAI on GitHub in a new tab">
+              <span class="project-card-action-icon" aria-hidden="true"></span>
+            </a>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-card-art">
+            <img src="img/projects/voter-data-integrity.webp" alt="" width="72" height="56" decoding="async">
+          </div>
+          <div class="project-card-body">
+            <h2>Voter data integrity and audit system</h2>
+            <p>A system for checking voter data and supporting audits.</p>
+            <button class="project-card-action" type="button" disabled
+              aria-label="Voter data integrity and audit system link unavailable" title="Project link unavailable">
+              <span class="project-card-action-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-card-art">
+            <img src="img/projects/email-signature.webp" alt="" width="72" height="56" loading="lazy"
+              decoding="async">
+          </div>
+          <div class="project-card-body">
+            <h2>Email signature</h2>
+            <p>A university tool for building and previewing an Outlook email signature.</p>
+            <a class="project-card-action" href="https://resources.tamusa.edu/employees/brand-guide/templates/email-signature.html"
+              target="_blank" rel="noopener" aria-label="Open email signature builder in a new tab">
+              <span class="project-card-action-icon" aria-hidden="true"></span>
+            </a>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-card-art">
+            <img src="img/projects/suggestion-form.webp" alt="" width="72" height="56" loading="lazy"
+              decoding="async">
+          </div>
+          <div class="project-card-body">
+            <h2>Suggestion form</h2>
+            <p>An internal form that validates and saves suggestions for the Web Services team.</p>
+            <button class="project-card-action" type="button" disabled
+              aria-label="Suggestion form link unavailable" title="Project link unavailable">
+              <span class="project-card-action-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-card-art">
+            <img src="img/projects/audit-form.webp" alt="" width="72" height="56" loading="lazy" decoding="async">
+          </div>
+          <div class="project-card-body">
+            <h2>Audit form</h2>
+            <p>A form for recording audit findings.</p>
+            <button class="project-card-action" type="button" disabled
+              aria-label="Audit form link unavailable" title="Project link unavailable">
+              <span class="project-card-action-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-card-art">
+            <img src="img/projects/faculty-photo-crop.webp" alt="" width="72" height="56" loading="lazy"
+              decoding="async">
+          </div>
+          <div class="project-card-body">
+            <h2>Faculty profile photo crop tool</h2>
+            <p>A tool for cropping faculty photos to a consistent square format for department pages.</p>
+            <a class="project-card-action" href="https://lilimartinez23.github.io/image-crop-tool/"
+              target="_blank" rel="noopener" aria-label="Open the photo crop tool demo in a new tab">
+              <span class="project-card-action-icon" aria-hidden="true"></span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
 
   <footer class="site-footer" id="connect">
     <div class="container">
