@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111213">
+  <meta name="description" content="A MySQL practice database that uses constraints and triggers to enforce voting rules and track changes.">
+  <title>Voter data integrity and audit system — Liliana Martinez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600&amp;display=swap" rel="stylesheet">
+  <style>
+:root {
+  color-scheme: light;
+  --dark: #111213;
+  --light: #f2f2ed;
+  --ink: #202124;
+  --muted: #535955;
+  --line: #dedfd9;
+  --focus: #50758d;
+  --font: Inter, system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--dark); color: var(--ink); font: 400 16px/1.7 var(--font); }
+h1, h2, h3, p, figure { margin: 0; }
+a { color: inherit; text-underline-offset: .23em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
+::selection { background: #b8cddd; color: var(--ink); }
+.container { width: min(1080px, calc(100% - 96px)); margin-inline: auto; }
+.skip-link {
+  position: fixed; z-index: 2; left: 12px; top: 12px; padding: 10px 18px;
+  border-radius: 999px; background: var(--light); transform: translateY(-160%);
+}
+.skip-link:focus { transform: none; }
+.site-header, .site-footer { color: var(--light); }
+.site-header > div { display: flex; align-items: center; justify-content: space-between; min-height: 84px; }
+.brand { font-size: 26px; font-weight: 550; letter-spacing: -1.8px; line-height: 1; text-decoration: none; }
+.back { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #b9bcbd; font-size: 14px; }
+.site-header a:focus-visible, .site-footer a:focus-visible { outline-color: var(--light); }
+.hero { padding-block: 22px 59px; text-align: center; color: var(--light); }
+.hero-art {
+  display: grid; place-items: center; width: 156px; height: 122px; margin: 0 auto 22px;
+  border: 1px solid #303133; border-radius: 20px; background: #171717;
+}
+.hero-art img { display: block; width: 120px; height: auto; image-rendering: pixelated; }
+h1 {
+  max-width: 780px; margin-inline: auto; font-size: clamp(39px, 6.1vw, 66px); font-weight: 600;
+  letter-spacing: -.055em; line-height: 1.09; text-wrap: balance;
+}
+.deck { max-width: 610px; margin: 17px auto 0; color: #b1b4b6; font-size: 17px; line-height: 1.7; text-wrap: pretty; }
+.stack { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px 18px; margin: 20px 0 0; padding: 0; list-style-type: none; }
+.stack li { color: #d7d8d5; font-size: 13px; }
+.stack li + li::before { margin-right: 18px; color: #9da4a6; content: "·"; }
+.content { background: var(--light); }
+.study-intro { padding-block: 52px 42px; }
+.study-details { padding-block: 46px 58px; }
+.failure-section {
+  --ink: var(--light);
+  --muted: #c5cac5;
+  --line: #363839;
+  --focus: #8baabd;
+  --failure-card: var(--dark);
+  padding-block: 46px;
+  background: #000;
+  color: var(--ink);
+}
+.section {
+  display: grid; grid-template-columns: minmax(175px, .68fr) minmax(0, 2fr);
+  align-items: start; gap: clamp(24px, 4vw, 52px);
+}
+.section + .section { margin-top: 37px; padding-top: 37px; border-top: 1px solid #d9dad4; }
+h2 { font-size: clamp(26px, 3vw, 34px); font-weight: 550; line-height: 1.18; letter-spacing: -.045em; text-wrap: balance; }
+h3 { font-size: 17px; font-weight: 600; line-height: 1.35; letter-spacing: -.022em; }
+.section-body > :first-child { margin-top: 0; }
+.section-body > * + * { margin-top: 16px; }
+.section-body > p { max-width: 72ch; }
+.section-body p, .details { color: var(--muted); }
+code { color: var(--ink); font: .88em ui-monospace, Consolas, monospace; overflow-wrap: anywhere; }
+.cases, .references { margin-bottom: 0; padding: 0; list-style-type: none; }
+.cases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.case {
+  display: grid; align-content: start; gap: 12px; padding: 19px 21px;
+  border: 1px solid var(--line); border-radius: 16px; background: var(--failure-card);
+}
+.case p { margin-top: 5px; font-size: 14px; line-height: 1.6; }
+.case > p { margin-top: 0; }
+.case strong { display: block; margin-bottom: 3px; color: var(--ink); font-weight: 600; }
+.database-section { grid-template-columns: 1fr; justify-items: center; gap: 24px; text-align: center; }
+.database-section > h2 { justify-self: start; text-align: left; }
+.database-section .section-body { width: min(100%, 768px); }
+.database-map {
+  padding: 23px 20px 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff;
+}
+.table-links {
+  display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px;
+  padding: 0; margin: 0; list-style: none;
+}
+.table-link {
+  position: relative; display: grid; align-content: start; justify-items: center;
+  gap: 8px; text-align: center; line-height: 1.4;
+}
+.table-link img {
+  display: block; width: 50px; height: 50px; padding: 5px;
+  border-radius: 12px; background: #e5e9e2;
+}
+.table-link strong, .database-notes strong { display: block; color: var(--ink); font-weight: 600; }
+.table-link strong { font-size: 15px; }
+.table-detail { display: block; margin-top: 3px; color: var(--muted); font-size: 13px; }
+.link-arrow {
+  position: absolute; inset: 14px -21px auto auto;
+  color: #59685f; font: 500 21px/1 var(--font);
+}
+.database-notes {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px;
+  margin-top: 17px; padding-top: 13px; border-top: 1px solid var(--line);
+  font-size: 14px; line-height: 1.55; text-align: left;
+}
+.database-notes strong { margin-bottom: 3px; }
+.references li { color: var(--muted); font-size: 14px; line-height: 1.6; }
+.references li + li { margin-top: 8px; }
+.related { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 82px; padding-block: 16px; }
+.related p { color: #b1b4b6; font-size: 13px; }
+.related a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; }
+@media (max-width: 840px) {
+  .container { width: min(680px, calc(100% - 48px)); }
+  .section { grid-template-columns: 1fr; gap: 13px; }
+  .section + .section { margin-top: 28px; padding-top: 28px; }
+  h2 { text-wrap: wrap; }
+  .database-section { gap: 18px; }
+}
+@media (max-width: 600px) {
+  .cases { grid-template-columns: 1fr; }
+}
+@media (max-width: 540px) {
+  .container { width: calc(100% - 36px); }
+  .site-header > div { min-height: 68px; }
+  .hero { padding-block: 15px 42px; }
+  .hero-art { margin-bottom: 18px; }
+  .deck { font-size: 16px; }
+  .stack { margin-top: 16px; }
+  .stack li + li::before { content: none; }
+  .study-intro, .failure-section { padding-block: 34px; }
+  .study-details { padding-block: 34px 40px; }
+  .table-links, .database-notes { grid-template-columns: 1fr; }
+  .database-map { padding: 16px; }
+  .table-links { gap: 21px; }
+  .table-link {
+    grid-template-columns: 44px 1fr; align-items: center;
+    justify-items: start; gap: 10px; text-align: left;
+  }
+  .table-link img { width: 44px; height: 44px; padding: 4px; }
+  .link-arrow { inset: auto auto -20px 13px; transform: rotate(90deg); font-size: 18px; }
+  .case { gap: 7px; }
+  .related { align-items: flex-start; flex-direction: column; gap: 0; }
+}
+@media print {
+  body, .hero, .content { background: white; color: #111; }
+  .site-header, .site-footer, .hero-art, .skip-link { display: none; }
+  .container { width: 100%; }
+  .hero { padding: 0 0 18px; text-align: left; }
+  h1 { margin: 0; font-size: 32px; }
+  h2 { font-size: 22px; }
+  .deck, .stack li { color: var(--muted); }
+  .deck { margin-inline: 0; }
+  .stack { justify-content: flex-start; }
+  .study-intro, .failure-section, .study-details { padding-block: 18px; }
+  .failure-section {
+    --ink: #202124;
+    --muted: #535955;
+    --line: #dedfd9;
+    --failure-card: #fff;
+    background: white;
+  }
+  .section { display: block; }
+  .section h2 { margin-bottom: 9px; break-after: avoid; }
+  .section + .section { padding-top: 18px; margin-top: 18px; }
+  .case, .database-map { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="Liliana Martinez home">lm</a>
+      <a class="back" href="projects.html"><span aria-hidden="true">←</span> Projects</a>
+    </div>
+  </header>
+  <main id="main">
+    <header class="hero">
+      <div class="container">
+        <div class="hero-art"><img src="data:image/webp;base64,UklGRhYBAABXRUJQVlA4TAoBAAAvR8ANEDVArrU9mTJFzQANpAFs55BDDew4I8u/A9wqYO/QgnsD7NxD8iWfYLvvi5h/B27bhpFkbbvLT/RfadXE8NqCIrqrqtGJnyBwMm6Ak25WrbKRMbBcVQy+jDS8fxp8Cbh3heDaXbODvpxYyMaLm3yFuDEozkuy+Iv94n7FzM1I1+xmKi/2GQ/NqQAG0wyJ7Xliac9Bm5EdTizlMOjzZlxocsOEJ7vidkOWsjvn82Z0PauvD5bo90wEh82qfpk985s/HkdvCoE1Y7hNZuHrJJ9ZpjKqJQ4mt15rCp1NbjmdlzcSuX5m7Gc/D9xbn/TzUINhLo0CQW06iTH1OIZSikPrCQ3J4U+lAg==" alt="" width="72" height="56"></div>
+        <h1>Voter data integrity and audit system</h1>
+        <p class="deck">A MySQL practice database that uses constraints and triggers to enforce voting rules and track changes.</p>
+        <ul class="stack" role="list" aria-label="Technologies and methods"><li>MySQL</li><li>SQL</li><li>Relational design</li><li>Triggers</li></ul>
+      </div>
+    </header>
+    <div class="content">
+      <article aria-label="Voter data integrity and audit system case study">
+        <div class="container study-intro">
+          <section class="section" aria-labelledby="section-1">
+            <h2 id="section-1">Project overview</h2>
+            <div class="section-body">
+        <p>I built a relational database for a sample election. It links voter registrations to ballots and candidates to races, and records the selections on each ballot. The project uses database rules to catch invalid writes and audit tables to show who changed a record and when.</p>
+            </div>
+          </section>
+          <section class="section database-section" aria-labelledby="section-2">
+            <h2 id="section-2">How the database works</h2>
+            <div class="section-body">
+              <figure class="database-map" aria-label="How election records are linked, checked, and audited">
+                <ol class="table-links" role="list">
+                  <li class="table-link">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAABwklEQVR4nO3ZwU7DMAzG8W7qQ+XGlUfedTe/FQgJJFRol9ZOnNj/3w1BK+YviZNlWQAAAAAAAAAAAAAAAAAApm4WLynvbx9LUvJ4qmp41/4DmYtv8flVAWQvvkUdLgdA8W3qsS6DrIUzshiE6h4AHQJwRgDOCMCZWRO2amCSrJmvo+0cyvfvswSxjrplK0mCuI++Xy7BT9tuPWBvZJfgBe8ewH8FPVpW5PG8bZ/5+vnMUmQdYstlsPs2tObDSPB1v1sA25F4prCy+duoSxMHsaxNuCWZaAljBjgjgMgBaBppUTTwmXSfATUhlKA7HpcmfPZgVU4e3GrfodFy9g33dXQ2XZYgzQiSoGt/9xnwU8jakS/BC++2BL0KQgwKP1N4LueAo1lQkvWGIW/Eyq+/nWk0T3MfcOV5CRpE16+jR3lXihlwVLBXo7nsPFt7M3YlLK8Z1mQGHO1wam/EJMmdsXkAe18lXBlhsvNcpBDMA9gWrMW+XgI15HWEU2+t2sLPFFDX+4BR3jUSbsScEYAzAnBGAM4IIMo2NNLhaIoZEHVb2LseqiWIEPR1UPeA7CFI8s8PAAAAAAAAAAAAAAAAYPnjE3zE18gxTt5oAAAAAElFTkSuQmCC" alt="" width="50" height="50">
+                    <div><strong>Voter</strong><span class="table-detail">Unique registration</span></div>
+                    <span class="link-arrow" aria-hidden="true">→</span>
+                  </li>
+                  <li class="table-link">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAABkUlEQVR4nO3aMU7DQBBGYYM41Ha0HJmWbm8FQqKILAdHiMybf/O+BkHDal7W6zjZNkmSJEmSJEmStLqnyn823l4/txDz/aNkNs9bkaThV663JEDa8CvXffcAqcOvWv/Ltui1NeVFU3YG6JgBYAaAGQBmAJgBYAaAGQBmAJgBYAaAlT8L6vLAbjZ5JuUOgBkAZgBYizNgNrkeE9wBMAPADAAzAMwAMAPAogOM8O8cRQcYP8NPjxAZYOyG/v17aojIACu9m44LMA5e6anDjwswFht+qwDj5Bqeeo2PCDBO7miu/T391d/icfQ4uKO5HOxfh3/rjqEj4jtgHgzgbHj00JYK8FuEFQ/dlgFuHexqw29xBuwH/F93Oymx2uyAs8GlDDQ+wOWw9z9X1DLAowy/dYBHYQCYAWAGgBkAZgCYAWAtHkUM6MOWDu8x3AEwA8AMAGtxBswG12KKOwBmAJgBYAaAGQBmgEe7DV31O55td0D6Pf688/pLLkGpEWbBusvOgLQIM2y9kiRJkiRJkiRt130BKxWFFplybRYAAAAASUVORK5CYII=" alt="" width="50" height="50">
+                    <div><strong>Ballot</strong><span class="table-detail">At most one per voter</span></div>
+                    <span class="link-arrow" aria-hidden="true">→</span>
+                  </li>
+                  <li class="table-link">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAABgklEQVR4nO3csW7CUBBE0YfFR22XNp+cNp3/KikTWXKCeWJndt89TUqcudgIIxgDAAAAAAAAAAAAAAAAQDc35YPH+9vXMLF/fEq2uK0+vDpE6oM5D68KsY0klcbPPN77WPC66/QE2VT/nNP4Z8eTESXtEuQ8vvK4Xh7g+CxyHf/s+F59FkjOAPwggBgBxAggtmSAMHpTuK06fphEWCpAHEZ3iLBMgDB9N75EgDAdf4kAYTx++wBhPn7rAFFg/LYBosj4LQNEofFbBqg0vl2AmHxjVO2zB6sAMXmLoOL4NgFi8haBwy2F0gH2iQ/Eq73oWgZ4NkL18a0CXI3QYXy7AI9G6DK+ZYD/InQa3zbAlctR5fGtAzwybvXx7QP8NXKH8UsE+D328W8HJQJ0Hb9UgK4IIEYAMQKIEUCMAN0DZH/lZ1b2J2uSM8A1QgiOa+v8FdArVDf6pF/UDrMICmmXoGq3EPak4+XXUlb6tRTnS9Be7AwFAAAAAAAAAAAAAAAAxrlvADDGIBUMlegAAAAASUVORK5CYII=" alt="" width="50" height="50">
+                    <div><strong>Selection</strong><span class="table-detail">Links a ballot to a chosen candidate</span></div>
+                    <span class="link-arrow" aria-hidden="true">→</span>
+                  </li>
+                  <li class="table-link">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAABtklEQVR4nO3bO3LDMAyEYUqTQ6FLmyOnTcdbJa3HYzkjmwR2qf9rPbZorAjq2RoAAAAAAAAAAAAATLM1Q/H1+Xv0Wf/+sfpP2wpFdw5jb4sW/53vZZLeQ2JgAVVng+Sg3unzbuuD3ICeFfFMAUf8RgaLNeCVwqkV2iaAeLDnvlrMR99TW5j3VYvvEoJUALPaiHI7kg7gCmQCiLu2MHqvvf89lTYkE8BVEUAxAihGAMUIoBgBFJMJoE8+TJx9mGsfwFVJBxCDZoHKSZd8AH3ChbMZF/iWDWB0COrFlwzgyNkQlNvOLam94Rb3hAUET0X4B9HFer7lGtAH3hNWIz/AFZ79AQBRVv0yThwNuawF0oMMzgO8i+4wO2QGEgXXbhSC2Fbt62GyXpQGEP8UaWRhMrdlEUDV2WyInUWnb1ClACEyjtQAFF8biuIx7Vf5o0eOtp91VFZ6OboLHAZWjyMlAIeb473oVabpATgUvzKE9BakWvyq8U0NQPV5TKXXmSzuCa9sWgCue3/2LGAGFCOAFQNwbz+ZbYgZUOwjYyMuTypXYAYUI4BiBAAAAAAAAAAAAAAAQJvjD2Fu6yNTkS70AAAAAElFTkSuQmCC" alt="" width="50" height="50">
+                    <div><strong>Candidate</strong><span class="table-detail">Belongs to a race</span></div>
+                    <span class="link-arrow" aria-hidden="true">→</span>
+                  </li>
+                  <li class="table-link">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAABgklEQVR4nO3asY6CQBRAUdzwUdNtu5+87XbzV24oTCgERAfue8w9iZ2ivitM1BkGSZIkSZIkSZK0pvx836fbkNhtSKK8OOj6+5fmPU1uxPC2hlQafaozxBjpF1AOvITMjx01BnIGvKuuDHHPc0SKETZA/WBImWKECFAPHELLGNOxWr/WkItwhvWm1XvAF+EzzYcW5ftDVwEixug2wFqMZ5eXoyJ9HXHQzOrJ65MBYAaAGQBmAJgBYAaAGQBmAJgBYAaAGQBmAJgBYAaAGQBmAJgBYKkDlCB/rHfxn3BZGHaG7YfpApQ3P9mPx2UKMV7xMlISnRVjpqHXhWGuHS96DPwMWLJnWI/7boWNGCNEgNpoGHt2u0VZL7rYnFsOWGfcnJtwH2jYS9CZXl0vth7fSncB1s4KYj3oNsAcuRCn/i3oCgwAMwDMADADwAwAMwDMADADwAwAMwDMADADwAwAMwDMADADwAwAMwDMADADwAwAMwDMADADSJIkSZIkSZI0XN4/JOKYFAy/1ewAAAAASUVORK5CYII=" alt="" width="50" height="50">
+                    <div><strong>Race</strong><span class="table-detail">Sets the vote limit</span></div>
+                  </li>
+                </ol>
+                <figcaption class="database-notes">
+                  <p><strong>Validate changes</strong>Constraints and <code>BEFORE</code> triggers check links, account access, and vote limits.</p>
+                  <p><strong>Record changes</strong><code>AFTER</code> triggers log inserts, updates, and deletes in the matching audit table.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+        </div>
+        <section class="failure-section" aria-labelledby="section-3">
+          <div class="container section">
+          <h2 id="section-3">Intentional rejection tests</h2>
+          <div class="section-body">
+      <p>These cases describe the expected results for the local SQL. For each rejected write, the test checks that the target table stays unchanged.</p>
+      <ol class="cases" role="list">
+        <li class="case"><div><h3>Repeat a registration number</h3><p>Insert a voter with an existing registration number from the authorized test account.</p></div><p><strong>Expected result</strong>The unique constraint rejects the row. This verifies that the registration number can identify only one voter record.</p></li>
+        <li class="case"><div><h3>Use a nonexistent voter ID</h3><p>Insert a ballot linked to a voter ID that is absent from <code>voter</code>.</p></div><p><strong>Expected result</strong>The foreign key rejects the ballot, which verifies that every ballot must refer to an existing voter.</p></li>
+        <li class="case"><div><h3>Insert a race from another account</h3><p>Try to add the sample Dog Catcher race from a session that can insert into the table but fails the account check.</p></div><p><strong>Expected result</strong>The trigger raises <code>SQLSTATE 45000</code>. The same insert from the authorized test account is the positive control.</p></li>
+        <li class="case"><div><h3>Exceed the vote limit</h3><p>In the one-vote Dog Catcher race, try to insert a second, different candidate on the same ballot.</p></div><p><strong>Expected result</strong>The first selection is allowed. The second raises <code>SQLSTATE 45000</code> once the race’s limit is reached. Using a different candidate isolates the vote limit from the duplicate-pair constraint.</p></li>
+      </ol>
+          </div>
+          </div>
+        </section>
+        <div class="container study-details">
+          <section class="section" aria-labelledby="section-4">
+            <h2 id="section-4">Audit verification</h2>
+            <div class="section-body">
+        <p>The audit triggers are designed to record the timestamp, connected MySQL user, and a description of the change. The textbook’s positive tests insert, update, and delete a valid ballot, then check <code>ballot_audit</code> for the corresponding entries. One example changes the ballot type to <code>absentee</code> and checks for the updated value in the audit description.</p>
+            </div>
+          </section>
+          <section class="section" aria-labelledby="section-5">
+            <h2 id="section-5">Sources</h2>
+            <div class="section-body">
+        <ul class="references" role="list">
+          <li>Rick Silva, <cite>MySQL Crash Course</cite>, Chapter 17, “Tracking Changes to Voter Data with Triggers,” pp. 277–300. See exercise 17-4 on p. 283, the account test on p. 286, and the vote-limit trigger on pp. 287–288.</li>
+        </ul>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container related">
+      <p>Liliana Martinez</p>
+      <a href="weather-data-pipeline.html">Weather data pipeline <span aria-hidden="true">&nbsp;→</span></a>
+    </div>
+  </footer>
+</body>
+</html>
