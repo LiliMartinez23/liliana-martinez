@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111213">
+  <meta name="description" content="A Texas A&amp;M University–San Antonio tool that previews a branded email signature and copies it for use in Outlook.">
+  <title>Email signature — Liliana Martinez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="../css/styles.css?v=20261119-case-studies">
+  <script src="../js/homepage.js?v=20261117-responsive" defer></script>
+</head>
+<body class="case-study-page">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header standalone-header case-study-header container">
+    <a class="brand" href="../index.html" aria-label="Liliana Martinez home">lm</a>
+    <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-navigation"
+      hidden>
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+    <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+      <a href="../projects.html">Projects</a>
+      <a href="../blogs.html">Blog</a>
+      <a href="../resources.html">Resources</a>
+    </nav>
+  </header>
+  <main id="main" class="case-study">
+    <header class="hero">
+      <div class="container">
+        <div class="hero-art"><img src="../img/projects/email-signature.webp" alt="" width="72" height="56"></div>
+        <h1>Email signature</h1>
+        <p class="deck">A Texas A&amp;M University–San Antonio tool that previews a branded email signature and copies it for use in Outlook.</p>
+        <ul class="stack" role="list" aria-label="Technologies and methods"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Outlook</li></ul>
+      </div>
+    </header>
+    <div class="content">
+      <article aria-label="Email signature case study">
+        <section class="section container project-overview" aria-labelledby="section-1">
+          <h2 id="section-1">Project overview</h2>
+          <div class="section-body">
+            <p>The Texas A&amp;M University–San Antonio brand guide includes a signature builder for Outlook. Faculty and staff can enter their own details in a form and see them in a shared layout with the university logo.</p>
+          </div>
+        </section>
+        <section class="workflow-section" aria-labelledby="section-2">
+          <div class="container workflow-inner">
+            <h2 id="section-2">How the builder works</h2>
+            <figure class="workflow-map">
+              <ol class="workflow-flow" role="list">
+                <li class="workflow-step">
+                  <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>
+                  <div><strong>Enter details</strong><span>Add a name, title, department, and contact information.</span></div>
+                  <span class="flow-arrow" aria-hidden="true">→</span>
+                </li>
+                <li class="workflow-step">
+                  <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                  <div><strong>Review the preview</strong><span>See the signature update with each edit.</span></div>
+                  <span class="flow-arrow" aria-hidden="true">→</span>
+                </li>
+                <li class="workflow-step">
+                  <i class="fa-solid fa-clipboard" aria-hidden="true"></i>
+                  <div><strong>Copy for Outlook</strong><span>Paste the formatted signature into Outlook’s signature settings.</span></div>
+                </li>
+              </ol>
+              <figcaption>The form and preview stay on the same page, so people can adjust their information and immediately see the result.</figcaption>
+            </figure>
+          </div>
+        </section>
+        <section class="failure-section" aria-labelledby="section-3">
+          <div class="container">
+            <h2 id="section-3">How the form handles variation</h2>
+            <div class="section-body">
+              <p>Contact details can vary across departments and roles. The form supports those differences within the same signature layout.</p>
+              <ul class="cases" role="list">
+                <li class="case">
+                  <div><h3>Multiple titles or contact details</h3><p>People can add another title, email, phone number, or website. The preview groups filled entries on the corresponding line and separates them with a vertical bar.</p></div>
+                </li>
+                <li class="case">
+                  <div><h3>Optional contact information</h3><p>The generated signature omits the email, office phone, or website line when its main field is empty. A second address line is available for offices that need it.</p></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <div class="container study-details">
+          <section class="section" aria-labelledby="section-4">
+            <h2 id="section-4">The Outlook handoff</h2>
+            <div class="section-body">
+              <p>The copy action assembles a formatted HTML signature with inline styles and the university’s hosted logo image. This gives users a single block to paste into Outlook, including the contact details and branding they saw in the preview.</p>
+            </div>
+          </section>
+          <section class="section" aria-labelledby="section-5">
+            <h2 id="section-5">Sources</h2>
+            <div class="section-body">
+              <ul class="references" role="list">
+                <li><a href="https://resources.tamusa.edu/employees/brand-guide/templates/email-signature.html">Email Signature Builder</a>, Texas A&amp;M University–San Antonio Brand Guide.</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer" id="connect">
+    <div class="container">
+      <div class="footer-main">
+        <h2>Let’s Connect</h2>
+        <p>A question, an idea, or just a hello. My inbox is open.</p>
+        <nav class="social-links" aria-label="Social links in footer">
+          <a class="social-link" href="https://www.linkedin.com/in/liliana-martinez-/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a class="social-link" href="https://github.com/LiliMartinez23" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          <a class="social-link" href="https://discord.com/users/641398458745618434" target="_blank" rel="noopener" aria-label="Discord" title="Discord"><i class="fa-brands fa-discord" aria-hidden="true"></i></a>
+          <a class="social-link" href="mailto:lilianafinona3@gmail.com" aria-label="Gmail" title="Gmail"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+        </nav>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Liliana Martinez</span><span>San Antonio, Texas</span></div>
+    </div>
+  </footer>
+</body>
+</html>

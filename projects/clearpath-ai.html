@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111213">
+  <meta name="description" content="A study tool that generates two summaries from the same passage and checks the ADHD-friendly version against ten readability and structure rules.">
+  <title>ClearPathAI — Liliana Martinez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="../css/styles.css?v=20261119-case-studies">
+  <script src="../js/homepage.js?v=20261117-responsive" defer></script>
+</head>
+<body class="case-study-page">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header standalone-header case-study-header container">
+    <a class="brand" href="../index.html" aria-label="Liliana Martinez home">lm</a>
+    <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-navigation"
+      hidden>
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+    <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+      <a href="../projects.html">Projects</a>
+      <a href="../blogs.html">Blog</a>
+      <a href="../resources.html">Resources</a>
+    </nav>
+  </header>
+  <main id="main" class="case-study">
+    <header class="hero">
+      <div class="container">
+        <div class="hero-art"><img src="../img/projects/clearpath-ai.webp" alt="" width="72" height="56"></div>
+        <h1>ClearPathAI</h1>
+        <p class="deck">A study tool that generates two summaries from the same passage and checks the ADHD-friendly version against ten readability and structure rules.</p>
+        <ul class="stack" role="list" aria-label="Technologies and methods"><li>Python</li><li>Streamlit</li><li>Generative AI</li></ul>
+      </div>
+    </header>
+    <div class="content">
+      <article aria-label="ClearPathAI case study">
+        <section class="section container project-overview" aria-labelledby="section-1">
+          <h2 id="section-1">Project overview</h2>
+          <div class="section-body">
+            <p>ClearPathAI turns dense study material into notes organized for learners with ADHD. The Streamlit app produces a baseline summary and a structured version from the same passage. The structured one organizes the material into learning objectives, key concepts, and recall questions.</p>
+            <p>I led evaluation and documentation for the team. I recorded how the two versions scored on readability and structure, reran ten sample passages three times each, and documented file-upload issues I found while testing.</p>
+          </div>
+        </section>
+
+        <section class="workflow-section" aria-labelledby="section-2">
+          <div class="container workflow-inner">
+            <h2 id="section-2">How the summary generator works</h2>
+            <figure class="workflow-map">
+              <ol class="workflow-flow" role="list">
+                <li class="workflow-step">
+                  <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+                  <div><strong>Provide study material</strong><span>Paste a passage into the app.</span></div>
+                  <span class="flow-arrow" aria-hidden="true">→</span>
+                </li>
+                <li class="workflow-step">
+                  <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                  <div><strong>Generate two summaries</strong><span>The model writes a baseline and a structured version from the same passage.</span></div>
+                  <span class="flow-arrow" aria-hidden="true">→</span>
+                </li>
+                <li class="workflow-step">
+                  <i class="fa-solid fa-list-check" aria-hidden="true"></i>
+                  <div><strong>Check and compare</strong><span>Review both summaries, their readability, and the results of each rule check.</span></div>
+                </li>
+              </ol>
+              <figcaption>The generator can make up to three attempts to produce a structured summary that reaches the 80% threshold.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="failure-section" aria-labelledby="section-3">
+          <div class="container">
+            <h2 id="section-3">What the rules measure</h2>
+            <div class="section-body">
+              <p>The Python checker scores ten rules equally. A summary passes the project’s threshold when it meets at least eight of them.</p>
+              <ul class="cases" role="list">
+                <li class="case">
+                  <div><h3>Length and readability</h3><p>The checker looks for sentences of up to 20 words, paragraphs of up to 80 words, and a Flesch–Kincaid grade level of 8 or below.</p></div>
+                </li>
+                <li class="case">
+                  <div><h3>Structure and recall</h3><p>It looks for three named sections, blank lines between them, three to six key-concept bullets, and at least two recall questions. Formulas have their own lines.</p></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <div class="container study-details">
+          <section class="section" aria-labelledby="section-4">
+            <h2 id="section-4">What the evaluation showed</h2>
+            <div class="section-body">
+              <p>Across ten passages and three runs per passage, the baseline summaries scored 20–40% on the project’s rules. The structured summaries scored 90–100%. In the first run of the Python textbook passage, the Flesch–Kincaid grade level fell from 10.9 to 4.5. These measures describe the text’s structure and readability.</p>
+              <p>I pasted the passages for every scored run to keep the input method consistent. In a separate upload check, TXT generated summaries successfully, while PDF and DOCX hit errors. I documented those failures for follow-up.</p>
+            </div>
+          </section>
+
+          <section class="section" aria-labelledby="section-5">
+            <h2 id="section-5">Sources</h2>
+            <div class="section-body">
+              <ul class="references" role="list">
+                <li><a href="https://github.com/GabrielKV4/AI-Academia">ClearPathAI on GitHub</a></li>
+                <li><a href="https://github.com/GabrielKV4/AI-Academia/blob/main/docs/sprint2_ownership.md">Team roles and evaluation responsibilities</a></li>
+                <li><a href="https://github.com/GabrielKV4/AI-Academia/blob/main/docs/sprint3_quantitative_eval.md">Evaluation runs and metrics</a></li>
+                <li><a href="https://github.com/GabrielKV4/AI-Academia/blob/main/docs/failure_analysis.md">File-upload failure analysis</a></li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer" id="connect">
+    <div class="container">
+      <div class="footer-main">
+        <h2>Let’s Connect</h2>
+        <p>A question, an idea, or just a hello. My inbox is open.</p>
+        <nav class="social-links" aria-label="Social links in footer">
+          <a class="social-link" href="https://www.linkedin.com/in/liliana-martinez-/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a class="social-link" href="https://github.com/LiliMartinez23" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          <a class="social-link" href="https://discord.com/users/641398458745618434" target="_blank" rel="noopener" aria-label="Discord" title="Discord"><i class="fa-brands fa-discord" aria-hidden="true"></i></a>
+          <a class="social-link" href="mailto:lilianafinona3@gmail.com" aria-label="Gmail" title="Gmail"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+        </nav>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Liliana Martinez</span><span>San Antonio, Texas</span></div>
+    </div>
+  </footer>
+</body>
+</html>
