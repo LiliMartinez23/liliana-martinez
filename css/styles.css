@@ -18,8 +18,6 @@ img { display: block; max-width: 100%; height: auto; }
 ::selection { background: #b8cddd; color: var(--ink); }
 :focus-visible { outline: 2px solid #668ba4; outline-offset: 5px; }
 .container { width: min(1160px,calc(100% - 96px)); margin-inline: auto; }
-.skip-link { position: fixed; z-index: 100; top: 12px; left: 12px; padding: 10px 20px; border-radius: 999px; background: var(--light); color: var(--ink); transform: translateY(-180%); }
-.skip-link:focus { transform: none; }
 .site-header { --menu-background: #1c1e1f; --menu-border: #414548; position: relative; z-index: 5; height: 0; min-height: 0; padding: 0; border: 0; color: var(--light); }
 .standalone-header { height: 84px; }
 .brand { position: absolute; top: 31px; left: 0; font-size: 26px; font-weight: 550; letter-spacing: -1.8px; line-height: 1; }
@@ -55,7 +53,6 @@ h1 { max-width: 1050px; margin-inline: auto; font-size: clamp(40px,5.15vw,66px);
 .project-card-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
 .project-card-action { display: grid; flex: none; place-items: center; width: 44px; height: 44px; margin-top: auto; padding: 0; border: 0; border-radius: 50%; background: #000; color: #fff; font-size: 18px; line-height: 1; }
 a.project-card-action:hover { box-shadow: 0 0 0 3px #dedfd9; }
-.project-card-action:disabled { cursor: default; }
 .section-intro { display: flex; justify-content: space-between; align-items: end; gap: 50px; margin-bottom: 34px; }
 .section-kicker { margin-bottom: 13px; font-size: 11px; font-weight: 500; color: var(--muted); letter-spacing: .55px; text-transform: uppercase; }
 h2 { font-size: 34px; font-weight: 500; line-height: 1.25; letter-spacing: -1.1px; }
@@ -377,7 +374,7 @@ body.dialog-open { overflow: hidden; }
 }
 @media print {
   .case-study-page, .case-study .hero, .case-study .content { background: white; color: #111; }
-  .case-study-page .site-header, .case-study-page .site-footer, .case-study .hero-art, .case-study .related, .case-study-page .skip-link { display: none; }
+  .case-study-page .site-header, .case-study-page .site-footer, .case-study .hero-art, .case-study .related { display: none; }
   .case-study .container { width: 100%; }
   .case-study .hero { padding: 0 0 18px; text-align: left; }
   .case-study h1 { margin: 0; font-size: 32px; }

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111213">
+  <meta name="description" content="A PHP and MySQL tool for submitting, viewing, and updating ideas for university website and workflow improvements.">
+  <title>Suggestion Form — Liliana Martinez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="../css/styles.css?v=20261119-case-studies">
+  <script src="../js/homepage.js?v=20261117-responsive" defer></script>
+</head>
+<body class="case-study-page">
+  <header class="site-header standalone-header case-study-header container">
+    <a class="brand" href="../index.html" aria-label="Liliana Martinez home">lm</a>
+    <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-navigation"
+      hidden>
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+    <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+      <a href="../projects.html">Projects</a>
+      <a href="../blogs.html">Blog</a>
+    </nav>
+  </header>
+  <main id="main" class="case-study">
+    <header class="hero">
+      <div class="container">
+        <div class="hero-art"><img src="../img/projects/suggestion-form.webp" alt="" width="72" height="56"></div>
+        <h1>Suggestion Form</h1>
+        <p class="deck">A PHP and MySQL tool for submitting, viewing, and updating ideas for university website and workflow improvements.</p>
+        <ul class="stack" role="list" aria-label="Technologies and methods">
+          <li>PHP</li><li>MySQL</li><li>JavaScript</li><li>HTML/CSS</li>
+        </ul>
+      </div>
+    </header>
+    <div class="content">
+      <article aria-label="Suggestion Form case study">
+        <section class="section container project-overview" aria-labelledby="overview">
+          <h2 id="overview">Project overview</h2>
+          <div class="section-body">
+            <p>I built an internal suggestion workflow for the Texas A&amp;M University–San Antonio Web Development Team. Staff can submit ideas for website features and workflow improvements in one place and return to them for review.</p>
+            <p>Each suggestion has a title, description, author, status, and creation and update dates. I worked on the submission and editing handlers, database reads and writes, and the list interface used to review the records.</p>
+          </div>
+        </section>
+        <section class="workflow-section" aria-labelledby="workflow">
+          <div class="container workflow-inner">
+            <h2 id="workflow">How the suggestion workflow works</h2>
+            <figure class="workflow-map">
+              <ol class="workflow-flow" role="list">
+                <li class="workflow-step">
+                  <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>
+                  <div><strong>Submit an idea</strong><span>A signed-in user enters a title and description. Each new suggestion starts as Submitted.</span></div>
+                  <span class="flow-arrow" aria-hidden="true">→</span>
+                </li>
+                <li class="workflow-step">
+                  <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                  <div><strong>Find it by status</strong><span>The list shows In Progress first, then Submitted and Completed. Each section initially shows up to three records.</span></div>
+                  <span class="flow-arrow" aria-hidden="true">→</span>
+                </li>
+                <li class="workflow-step">
+                  <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                  <div><strong>View or edit</strong><span>A View modal displays the idea. A separate Edit screen lets users update its title, description, or status.</span></div>
+                </li>
+              </ol>
+              <figcaption>Each status group expands independently when it contains more than three records. The PHP handlers use the signed-in user’s session and prepared MySQL statements, and the database stores timestamps.</figcaption>
+            </figure>
+          </div>
+        </section>
+        <section class="failure-section" aria-labelledby="validation">
+          <div class="container">
+            <h2 id="validation">How the form validates requests</h2>
+            <div class="section-body">
+              <ul class="cases" role="list">
+                <li class="case">
+                  <div>
+                    <h3>Required fields and length limits</h3>
+                    <p>PHP requires a title of up to 100 characters and a description of up to 250. The handler rejects invalid values before updating the record.</p>
+                  </div>
+                </li>
+                <li class="case">
+                  <div>
+                    <h3>Edit requests and status values</h3>
+                    <p>The edit handler requires an authenticated session, a POST request, a valid suggestion ID, and a matching CSRF token. It accepts Submitted, In Progress, and Completed as status values.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <div class="container study-details">
+          <section class="section" aria-labelledby="verification">
+            <h2 id="verification">Checking that edits persisted</h2>
+            <div class="section-body">
+              <p>I tested the editing and validation paths, corrected PHP rendering and grouping errors, and added a database read-back after the prepared UPDATE. The development notes confirm successful title and description edits.</p>
+              <p>During testing, a status edit redirected back to the list while the live database still showed the previous status. I investigated the deployed handler and database values. Status persistence and the final production rollout remained unverified in the development notes.</p>
+            </div>
+          </section>
+        </div>
+      </article>
+      <nav class="container related" aria-label="Related case study">
+        <p>Related case study</p>
+        <a href="audit-form.html">Audit Form</a>
+      </nav>
+    </div>
+  </main>
+  <footer class="site-footer" id="connect">
+    <div class="container">
+      <div class="footer-main">
+        <h2>Let’s Connect</h2>
+        <p>A question, an idea, or just a hello. My inbox is open.</p>
+        <nav class="social-links" aria-label="Social links in footer">
+          <a class="social-link" href="https://www.linkedin.com/in/liliana-martinez-/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a class="social-link" href="https://github.com/LiliMartinez23" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          <a class="social-link" href="https://discord.com/users/641398458745618434" target="_blank" rel="noopener" aria-label="Discord" title="Discord"><i class="fa-brands fa-discord" aria-hidden="true"></i></a>
+          <a class="social-link" href="mailto:lilianafinona3@gmail.com" aria-label="Gmail" title="Gmail"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+        </nav>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Liliana Martinez</span><span>San Antonio, Texas</span></div>
+    </div>
+  </footer>
+</body>
+</html>
